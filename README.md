@@ -1,5 +1,7 @@
 # Home Before Dark
 
+<img src="docs/img/icono.png" width="88" align="right" alt="Icono del pack">
+
 <img src="docs/img/portada.png" alt="Home Before Dark — valle nocturno con cabaña, arte del menú del pack" width="100%">
 
 **Modpack cooperativo de Minecraft** para un grupo de amigos: mundo medieval de aventura, magia y construcción, con

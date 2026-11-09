@@ -1,12 +1,12 @@
 name = "Home Before Dark"
 author = "Bryan"
-version = "0.4.1"
+version = "0.4.2"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "3cea06b77283a8de272f0e1590adc1b17e1937372188a228b2bd62756b735f63"
+hash = "d7d1b1c7a6f5715135ca1befa03688de0740b4c91f216751ae6219600f34b654"
 
 [versions]
 minecraft = "1.21.1"

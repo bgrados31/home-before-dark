@@ -3,7 +3,7 @@
 #  - moves jars in mods\ that are no longer in the pack to <instance>\_quitados_por_sync\
 #  - copies overrides\ (configs, layouts, assets)
 # Usage: powershell -ExecutionPolicy Bypass -File scripts\sync-instance.ps1 [-Instance <path>]
-param([string]$Instance = "$env:APPDATA\ATLauncher\instances\CrnicasdeEscarcha")
+param([string]$Instance = "$env:APPDATA\ATLauncher\instances\HomeBeforeDark")
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression, System.IO.Compression.FileSystem
 $root = Split-Path -Parent $PSScriptRoot

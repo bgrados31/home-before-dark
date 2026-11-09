@@ -10,7 +10,7 @@ para Bryan, su novia y ~10 amigos. Todo el juego va **en español**. Lee esto en
 | Minecraft / loader | 1.21.1 · NeoForge 21.1.265 · Java 21 |
 | Gestor del pack | [packwiz](https://packwiz.infra.link/) (`..\tools\packwiz.exe`), pack en `pack\` |
 | Launcher de los jugadores | ATLauncher (importan el `.mrpack` de `dist\`) |
-| Instancia de prueba | `%APPDATA%\ATLauncher\instances\CrnicasdeEscarcha` (nombre visible "Crónicas de Escarcha") |
+| Instancia de prueba | `%APPDATA%\ATLauncher\instances\HomeBeforeDark` (nombre visible "Home Before Dark"; antes `CrnicasdeEscarcha`) |
 | Servidor | `C:\Users\Bryan\Desktop\minecraft\servidor` (lo genera `scripts\make-server.ps1`) |
 | PC de Bryan | Windows 11, i5-13500H, RTX 4050 6 GB, 24 GB RAM; la instancia usa 8 GB |
 | Shell | Windows PowerShell 5.1 (ver trampas abajo) |
@@ -68,7 +68,7 @@ para Bryan, su novia y ~10 amigos. Todo el juego va **en español**. Lee esto en
 Agregar un mod: `cd pack; ..\..\tools\packwiz.exe -y modrinth add <slug>` (o `curseforge add --addon-id <id>`). Fijar versión:
 `modrinth add --project-id <id> --version-id <id>` y luego `packwiz pin <slug>`.
 
-Abrir el juego: `Start-Process "$env:APPDATA\ATLauncher\ATLauncher.exe" -ArgumentList '--launch','"Crónicas de Escarcha"'`.
+Abrir el juego: `Start-Process "$env:APPDATA\ATLauncher\ATLauncher.exe" -ArgumentList '--launch','"Home Before Dark"'`.
 Carga típica: 85–120 s (la primera vez tras cambiar mods, más).
 
 ## Trampas conocidas (no repetir)

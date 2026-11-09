@@ -138,7 +138,7 @@ hash = "9ae6579dac3719b301ca76ed90b72c7060e5c8264eba6afd88b47f8590d0223a"
 
 [[files]]
 file = "config/fancymenu/assets/ui/menu/info.png"
-hash = "2c2886e3a402b45c0411a8243c1c41acc4867690f5f79ccd4c01ade8661990d2"
+hash = "c2aa2fc73a455873e615c11ff641e29540962b6286513765def1357e04768835"
 
 [[files]]
 file = "config/fancymenu/assets/ui/menu/lema.png"
@@ -319,6 +319,10 @@ hash = "b6ee4450bcd594489ba96a043af5f4cbfc246690f25c137f167c6e7bc9fe80ba"
 [[files]]
 file = "config/waystones-common.toml"
 hash = "d8e94e38a716b53d654c26b8b37e44997c843efad5a073884a0d8b73de7fbdf4"
+
+[[files]]
+file = "instance.png"
+hash = "97d033c0d1b16cf3967b9c66226e25d73222642153d8f03053ff9f6cb6e33bda"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"

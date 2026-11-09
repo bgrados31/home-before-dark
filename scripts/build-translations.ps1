@@ -4,7 +4,7 @@
 #   3) compositional translation of block/item names (translations\materials|shapes|words.json + vanilla es_es)
 # Output: pack\resourcepacks\HomeBeforeDark-Espanol.zip  (+ translations\report.txt)
 # Usage: powershell -ExecutionPolicy Bypass -File scripts\build-translations.ps1 [-Analyze]
-param([string]$ModsDir = "$env:APPDATA\ATLauncher\instances\CrnicasdeEscarcha\mods", [switch]$Analyze)
+param([string]$ModsDir = "$env:APPDATA\ATLauncher\instances\HomeBeforeDark\mods", [switch]$Analyze)
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression, System.IO.Compression.FileSystem, System.Web.Extensions
 $root = Split-Path -Parent $PSScriptRoot
