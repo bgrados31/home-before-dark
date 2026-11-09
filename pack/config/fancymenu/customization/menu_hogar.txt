@@ -1,0 +1,233 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = hogar
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1762700000000
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+  widget_identifier_revision = 2
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = true
+}
+
+menu_background {
+  instance_identifier = fondo
+  background_type = image
+  image_path = [source:local]/config/fancymenu/assets/escenas/ciclo.apng
+  slide = false
+  repeat_texture = false
+  parallax = false
+  parallax_intensity_x = 0.006
+  parallax_intensity_y = 0.006
+  invert_parallax = false
+  restart_animated_on_menu_load = true
+}
+
+element {
+  element_type = image
+  instance_identifier = sombra-izq
+  anchor_point = top-left
+  x = 0
+  y = 0
+  width = 230
+  height = 2000
+  stay_on_screen = false
+  source = [source:local]/config/fancymenu/assets/ui/menu/sombra_izq.png
+}
+
+element {
+  element_type = image
+  instance_identifier = sombra-abajo
+  anchor_point = bottom-left
+  x = 0
+  y = -36
+  width = 4000
+  height = 36
+  stay_on_screen = false
+  source = [source:local]/config/fancymenu/assets/ui/menu/sombra_abajo.png
+}
+
+element {
+  element_type = image
+  instance_identifier = logo
+  anchor_point = top-left
+  x = 19
+  y = 14
+  width = 103
+  height = 52
+  stay_on_screen = false
+  source = [source:local]/config/fancymenu/assets/ui/logo.png
+}
+
+element {
+  element_type = image
+  instance_identifier = lema
+  anchor_point = top-left
+  x = 22
+  y = 68
+  width = 121
+  height = 9
+  stay_on_screen = false
+  source = [source:local]/config/fancymenu/assets/ui/menu/lema.png
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = boton-solo
+  anchor_point = mid-left
+  x = 3
+  y = -36
+  width = 91
+  height = 19
+  stay_on_screen = false
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/menu/solo.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/menu/solo_hover.png
+  hoversound = [source:local]/config/fancymenu/assets/sonidos/hover.wav
+  navigatable = true
+  button_element_executable_block_identifier = bloque-solo
+  [executable_block:bloque-solo][type:generic] = [executables:accion-solo;]
+  [executable_action_instance:accion-solo][action_type:opengui] = select_world_screen
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = boton-amigos
+  anchor_point = mid-left
+  x = 3
+  y = -17
+  width = 130
+  height = 19
+  stay_on_screen = false
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/menu/amigos.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/menu/amigos_hover.png
+  hoversound = [source:local]/config/fancymenu/assets/sonidos/hover.wav
+  navigatable = true
+  button_element_executable_block_identifier = bloque-amigos
+  [executable_block:bloque-amigos][type:generic] = [executables:accion-amigos;]
+  [executable_action_instance:accion-amigos][action_type:opengui] = join_multiplayer_screen
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = boton-mods
+  anchor_point = mid-left
+  x = 3
+  y = 2
+  width = 52
+  height = 19
+  stay_on_screen = false
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/menu/mods.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/menu/mods_hover.png
+  hoversound = [source:local]/config/fancymenu/assets/sonidos/hover.wav
+  navigatable = true
+  button_element_executable_block_identifier = bloque-mods
+  [executable_block:bloque-mods][type:generic] = [executables:accion-mods;]
+  [executable_action_instance:accion-mods][action_type:opengui] = net.neoforged.neoforge.client.gui.ModListScreen
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = boton-opciones
+  anchor_point = mid-left
+  x = 3
+  y = 21
+  width = 77
+  height = 19
+  stay_on_screen = false
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/menu/opciones.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/menu/opciones_hover.png
+  hoversound = [source:local]/config/fancymenu/assets/sonidos/hover.wav
+  navigatable = true
+  button_element_executable_block_identifier = bloque-opciones
+  [executable_block:bloque-opciones][type:generic] = [executables:accion-opciones;]
+  [executable_action_instance:accion-opciones][action_type:opengui] = options_screen
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = boton-salir
+  anchor_point = mid-left
+  x = 3
+  y = 46
+  width = 56
+  height = 19
+  stay_on_screen = false
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/menu/salir.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/menu/salir_hover.png
+  hoversound = [source:local]/config/fancymenu/assets/sonidos/hover.wav
+  navigatable = true
+  button_element_executable_block_identifier = bloque-salir
+  [executable_block:bloque-salir][type:generic] = [executables:accion-salir;]
+  [executable_action_instance:accion-salir][action_type:quitgame] = 
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = boton-idioma
+  anchor_point = bottom-left
+  x = 22
+  y = -13
+  width = 39
+  height = 9
+  stay_on_screen = false
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/menu/idioma.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/menu/idioma_hover.png
+  hoversound = [source:local]/config/fancymenu/assets/sonidos/hover.wav
+  navigatable = true
+  button_element_executable_block_identifier = bloque-idioma
+  [executable_block:bloque-idioma][type:generic] = [executables:accion-idioma;]
+  [executable_action_instance:accion-idioma][action_type:opengui] = language_select_screen
+}
+
+element {
+  element_type = custom_button
+  instance_identifier = boton-accesibilidad
+  anchor_point = bottom-left
+  x = 69
+  y = -13
+  width = 65
+  height = 9
+  stay_on_screen = false
+  backgroundnormal = [source:local]/config/fancymenu/assets/ui/menu/accesibilidad.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/ui/menu/accesibilidad_hover.png
+  hoversound = [source:local]/config/fancymenu/assets/sonidos/hover.wav
+  navigatable = true
+  button_element_executable_block_identifier = bloque-accesibilidad
+  [executable_block:bloque-accesibilidad][type:generic] = [executables:accion-accesibilidad;]
+  [executable_action_instance:accion-accesibilidad][action_type:opengui] = accessibility_options_screen
+}
+
+element {
+  element_type = image
+  instance_identifier = info
+  anchor_point = bottom-right
+  x = -166
+  y = -20
+  width = 163
+  height = 17
+  stay_on_screen = false
+  source = [source:local]/config/fancymenu/assets/ui/menu/info.png
+}
+
+element {
+  element_type = audio_v2
+  instance_identifier = ambiente
+  anchor_point = top-left
+  x = 0
+  y = 0
+  width = 20
+  height = 20
+  audio_instance_0 = [source:local]/config/fancymenu/assets/sonidos/ambiente_ciclo.wav
+  audio_instance_weight_0 = 1.0
+  play_mode = normal
+  looping = true
+  sound_source = ambient
+  volume = 0.55
+}

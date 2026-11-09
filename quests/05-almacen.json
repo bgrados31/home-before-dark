@@ -1,0 +1,117 @@
+{
+  "key": "almacen",
+  "group": "oficios",
+  "order": 10,
+  "icon": "ae2:controller",
+  "title": "&bAlmacén y máquinas",
+  "subtitle": "Del cajón de madera a la red digital",
+  "background": { "season": "Autumn", "frame": 55 },
+  "quests": [
+    {
+      "key": "cajones", "x": 0, "y": 0, "shape": "gear", "size": 2, "icon": "storagedrawers:oak_full_drawers_1",
+      "title": "&bUn almacén ordenado",
+      "desc": [
+        "Los cofres se llenan rápido. Los &6cajones&r (Storage Drawers) guardan muchísimo de un solo objeto y se ven en la pared.",
+        "",
+        "Clic derecho para meter (doble clic mete todo lo igual del inventario); clic izquierdo para sacar."
+      ],
+      "tasks": [ { "type": "item", "item": "storagedrawers:oak_full_drawers_1" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "controlador_cajones", "x": 2.5, "y": -1.5, "deps": ["cajones"], "optional": true,
+      "title": "Controlador de cajones",
+      "desc": [ "Conecta una pared de cajones a un controlador y mete cosas en cualquier cajón desde un solo bloque." ],
+      "tasks": [ { "type": "item", "item": "storagedrawers:controller" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "conector", "x": 2.5, "y": 1.5, "deps": ["cajones"],
+      "title": "Una red sencilla",
+      "desc": [
+        "&6Tom's Simple Storage&r une todos tus cofres, barriles y cajones: pon un &6conector de inventario&r tocando los contenedores...",
+        "",
+        "...y un &6terminal de almacenamiento&r al lado. Desde ahí ves y buscas todo lo que guardaron."
+      ],
+      "tasks": [ { "type": "item", "item": "toms_storage:inventory_connector" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "terminal_simple", "x": 5, "y": 1.5, "deps": ["conector"], "shape": "diamond", "size": 1.3,
+      "title": "El terminal del pueblo",
+      "desc": [ "Fabrica el terminal de almacenamiento. Pónganlo en la casa común: todos encontrarán todo sin abrir cofre por cofre." ],
+      "tasks": [ { "type": "item", "item": "toms_storage:storage_terminal" } ],
+      "rewards": [ { "type": "xp", "xp": 50 } ]
+    },
+    {
+      "key": "create", "x": 0, "y": 4, "deps": ["cajones"], "shape": "gear", "size": 1.5, "icon": "create:andesite_alloy",
+      "title": "&bIngeniería: Create",
+      "desc": [
+        "&6Create&r son máquinas de engranajes: molinos, prensas, mezcladoras, cintas y hasta trenes.",
+        "",
+        "&eTruco:&r mantén &6W&r con el cursor sobre cualquier objeto de Create y verás una animación (&6Ponder&r) que enseña cómo funciona."
+      ],
+      "tasks": [ { "type": "item", "item": "create:andesite_alloy" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "rueda", "x": 2.5, "y": 4, "deps": ["create"],
+      "title": "Energía del agua",
+      "desc": [ "Una rueda de agua junto a un río da fuerza rotacional gratis. Conéctala con ejes y engranajes." ],
+      "tasks": [ { "type": "item", "item": "create:water_wheel" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "prensa", "x": 5, "y": 4, "deps": ["rueda"],
+      "title": "La prensa mecánica",
+      "desc": [ "Aplasta lingotes en láminas y prepara recetas automáticas. Con una cinta debajo, trabaja sola." ],
+      "tasks": [ { "type": "item", "item": "create:mechanical_press" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "gafas", "x": 5, "y": 5.5, "deps": ["rueda"], "optional": true,
+      "title": "Gafas de ingeniero",
+      "desc": [ "Con las gafas puestas ves la velocidad y la tensión de cada máquina. Imprescindibles para diagnosticar." ],
+      "tasks": [ { "type": "item", "item": "create:goggles" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "ae2_guia", "x": 7.5, "y": -1.5, "deps": ["terminal_simple"], "shape": "gear", "size": 1.5, "icon": "ae2:certus_quartz_crystal",
+      "title": "&bAE2: el almacén digital",
+      "desc": [
+        "&6Applied Energistics 2&r convierte objetos en datos: una red que guarda miles de cosas y las fabrica sola.",
+        "",
+        "Trae su propia &6guía ilustrada&r: pulsa &6G&r con el cursor sobre cualquier objeto de AE2 para abrir su página, con recetas y estructuras en 3D.",
+        "",
+        "Empieza buscando cuarzo certus: crece en geodas y en los meteoritos (la &6brújula de meteoritos&r los señala)."
+      ],
+      "tasks": [ { "type": "item", "item": "ae2:certus_quartz_crystal" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "inscriptor", "x": 10, "y": -1.5, "deps": ["ae2_guia"],
+      "title": "El inscriptor",
+      "desc": [ "Imprime los circuitos que necesita la red. Las prensas de inscripción se encuentran dentro de los meteoritos." ],
+      "tasks": [ { "type": "item", "item": "ae2:inscriber" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "controlador", "x": 12.5, "y": -1.5, "deps": ["inscriptor"],
+      "title": "El cerebro de la red",
+      "desc": [ "El controlador ME reparte energía y canales a toda la red. Necesita energía (por ejemplo, de Create: Crafts & Additions)." ],
+      "tasks": [ { "type": "item", "item": "ae2:controller" } ],
+      "rewards": [ { "type": "xp", "xp": 50 } ]
+    },
+    {
+      "key": "red_me", "x": 12.5, "y": 1.5, "deps": ["controlador"], "shape": "pentagon", "size": 1.5, "icon": "ae2:terminal",
+      "title": "&bAlmacenamiento digital",
+      "desc": [
+        "Una unidad ME con una celda de 1k y un terminal: ya tienen un almacén digital.",
+        "",
+        "Desde aquí, la guía de AE2 enseña autocrafteo, exportadores y mucho más."
+      ],
+      "tasks": [ { "type": "item", "item": "ae2:drive" }, { "type": "item", "item": "ae2:item_storage_cell_1k" }, { "type": "item", "item": "ae2:terminal" } ],
+      "rewards": [ { "type": "xp_levels", "levels": 5 } ]
+    }
+  ]
+}

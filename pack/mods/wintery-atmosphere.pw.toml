@@ -1,0 +1,13 @@
+name = "Wintery Atmosphere"
+filename = "wintery-atmosphere-2.0.0-neoforge-1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/cDeqYJrP/versions/Yqbq1FOf/wintery-atmosphere-2.0.0-neoforge-1.21.1.jar"
+hash-format = "sha512"
+hash = "65265315bf6ae3a1cf355460e50ea886f4034eb90f8d9e1033ab1a243f521d03d7bf2b7f8c80d4beab59dc3ed5040314be94b492f7464187f59ad8670f0371aa"
+
+[update]
+[update.modrinth]
+mod-id = "cDeqYJrP"
+version = "Yqbq1FOf"

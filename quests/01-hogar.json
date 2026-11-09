@@ -1,0 +1,162 @@
+{
+  "key": "hogar",
+  "group": "historia",
+  "order": 0,
+  "icon": "minecraft:campfire",
+  "title": "&6Hogar antes del anochecer",
+  "subtitle": "Los primeros días: refugio, comida y un equipo",
+  "background": { "season": "Autumn", "frame": 30 },
+  "quests": [
+    {
+      "key": "bienvenida", "x": 0, "y": 0, "shape": "gear", "size": 2, "icon": "ftbquests:book",
+      "title": "&6¡Bienvenidos a Home Before Dark!",
+      "desc": [
+        "Un modpack para jugar juntos: explorar de día, volver a casa antes de que oscurezca y, poco a poco, convertir ese refugio en un pueblo.",
+        "",
+        "Las misiones son una &eguía&r, no un candado: juega a tu ritmo. Cada capítulo presenta mods del pack y da recompensas útiles.",
+        "",
+        "&eTeclas útiles:&r &6M&r mapa · &6Z&r zoom · &6K&r habilidades · &6R&r rodar · &6B&r mochila · &6F6&r shaders · &6F8&r chat de voz", "&eEn el inventario:&r &6R&r receta y &6U&r usos de un objeto (EMI) · &6G&r accesorios"
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Entendido" } ],
+      "rewards": [ { "type": "xp", "xp": 10 }, { "type": "item", "item": "minecraft:bread", "count": 8 } ]
+    },
+    {
+      "key": "equipo", "x": -2.5, "y": -1.5, "deps": ["bienvenida"], "icon": "minecraft:white_banner",
+      "title": "Un equipo para todos",
+      "desc": [
+        "En el servidor, crea un &6equipo&r con tus amigos para compartir misiones y terreno.",
+        "",
+        "Usa el botón &aMi equipo&r (arriba a la izquierda del inventario) o el comando &a/ftbteams party create <nombre>&r, y luego invita a los demás."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Ya tenemos equipo" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "terreno", "x": -2.5, "y": 1.5, "deps": ["bienvenida"], "icon": "minecraft:filled_map",
+      "title": "Reclamar el terreno",
+      "desc": [
+        "Abre el mapa con &6M&r y entra en el &aGestor de protecciones&r.",
+        "",
+        "Arrastra con clic izquierdo para reclamar chunks: nadie fuera de tu equipo podrá romper ni abrir nada ahí. Así la base queda a salvo."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Reclamé mi terreno" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "mesa", "x": 2.5, "y": 0, "deps": ["bienvenida"],
+      "title": "Una mesa de trabajo",
+      "desc": [
+        "Tala unos árboles y fabrica una mesa de trabajo.",
+        "",
+        "¿No sabes una receta? Pasa el cursor sobre el objeto en la lista de la derecha del inventario (&6EMI&r) y pulsa &6R&r."
+      ],
+      "tasks": [ { "type": "item", "item": "minecraft:crafting_table" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "mochila", "x": 2.5, "y": -2, "deps": ["mesa"],
+      "title": "Una mochila",
+      "desc": [
+        "Las mochilas de &6Sophisticated Backpacks&r guardan mucho más que el inventario y se pueden mejorar: recoger objetos solos, darte de comer, ordenar...",
+        "",
+        "Póntela en la espalda o colócala en el suelo como un cofre."
+      ],
+      "tasks": [ { "type": "item", "item": "sophisticatedbackpacks:backpack" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "herramientas", "x": 5, "y": -1, "deps": ["mesa"],
+      "title": "Herramientas de piedra",
+      "desc": [ "Una buena pica de piedra abre la puerta a todo lo demás: carbón, hierro y cuevas.", "", "&6FTB Ultimine:&r mantén la tecla a la izquierda del &61&r mientras picas o talas y romperás la veta o el árbol entero de una vez." ],
+      "tasks": [ { "type": "item", "item": "minecraft:stone_pickaxe" } ],
+      "rewards": [ { "type": "xp", "xp": 20 }, { "type": "item", "item": "minecraft:torch", "count": 8 } ]
+    },
+    {
+      "key": "horno", "x": 5, "y": 1, "deps": ["mesa"],
+      "title": "Fuego en el hogar",
+      "desc": [ "Un horno para cocinar la comida y fundir los minerales.", "", "Combustible abajo, lo que quieras cocinar arriba. Si no encuentras carbón, quema troncos en el horno: el carbón vegetal sirve igual." ],
+      "tasks": [ { "type": "item", "item": "minecraft:furnace" } ],
+      "rewards": [ { "type": "xp", "xp": 20 }, { "type": "item", "item": "minecraft:coal", "count": 8 } ]
+    },
+    {
+      "key": "refugio", "x": 7.5, "y": -1, "deps": ["herramientas"], "icon": "minecraft:oak_door",
+      "title": "Un techo antes de la noche",
+      "desc": [
+        "Construye un refugio sencillo con puerta.",
+        "",
+        "No hace falta que sea bonito: hace falta que esté listo &eantes del anochecer&r. Ya habrá tiempo de convertirlo en una casa de verdad."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Tengo un refugio" } ],
+      "rewards": [ { "type": "xp", "xp": 25 }, { "type": "item", "item": "minecraft:white_bed" } ]
+    },
+    {
+      "key": "antorchas", "x": 7.5, "y": 1, "deps": ["horno"],
+      "title": "Que no falte luz",
+      "desc": [ "Los monstruos aparecen en la oscuridad. Ilumina el refugio y sus alrededores.", "", "De noche, con los shaders activados (&6F6&r), la luz de las antorchas y los faroles se ve preciosa." ],
+      "tasks": [ { "type": "item", "item": "minecraft:torch", "count": 16 } ],
+      "rewards": [ { "type": "xp", "xp": 25 } ]
+    },
+    {
+      "key": "cama", "x": 10, "y": 0, "deps": ["refugio", "antorchas"], "shape": "pentagon", "size": 1.5, "icon": "minecraft:red_bed",
+      "title": "&6Hogar antes del anochecer",
+      "desc": [
+        "Duerme en una cama para pasar la noche.",
+        "",
+        "Dormir también fija el punto donde reapareces. Si mueres lejos, tus cosas te esperan en una tumba (&6Corpse&r)."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:adventure/sleep_in_bed" } ],
+      "rewards": [ { "type": "xp", "xp": 50 }, { "type": "item", "item": "minecraft:cooked_beef", "count": 8 } ]
+    },
+    {
+      "key": "siembra", "x": 2.5, "y": 2.5, "deps": ["mesa"], "icon": "minecraft:wheat_seeds",
+      "title": "Primera siembra",
+      "desc": [
+        "Planta semillas cerca de agua.",
+        "",
+        "Con &6Serene Seasons&r hay estaciones de verdad: cada cultivo crece en ciertas estaciones. La descripción de cada semilla dice cuáles."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:husbandry/plant_seed" } ],
+      "rewards": [ { "type": "xp", "xp": 20 }, { "type": "item", "item": "minecraft:bone_meal", "count": 8 } ]
+    },
+    {
+      "key": "olla", "x": 5, "y": 3, "deps": ["siembra", "horno"],
+      "title": "La olla del pueblo",
+      "desc": [
+        "La olla de &6Farmer's Delight&r prepara sopas, guisos y platos que dan buenos efectos.",
+        "",
+        "Ponla sobre una fogata o un horno encendido y mira sus recetas con &6U&r en EMI."
+      ],
+      "tasks": [ { "type": "item", "item": "farmersdelight:cooking_pot" } ],
+      "rewards": [ { "type": "xp", "xp": 30 }, { "type": "item", "item": "farmersdelight:flint_knife" } ]
+    },
+    {
+      "key": "hierro", "x": 10, "y": 2.5, "deps": ["horno"], "icon": "minecraft:iron_ingot",
+      "title": "La edad del hierro",
+      "desc": [ "Funde tu primer lingote de hierro.", "", "Las cuevas son más profundas de lo que parecen: hay lagos y ríos subterráneos, minas abandonadas y mazmorras. Lleven antorchas, comida y una cama de repuesto." ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:story/smelt_iron" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "waystone", "x": 12.5, "y": -1, "deps": ["cama"], "icon": "waystones:waystone",
+      "title": "Piedras de viaje",
+      "desc": [
+        "Las &6Waystones&r aparecen en aldeas y caminos. Haz clic derecho en una para activarla.",
+        "",
+        "Luego puedes viajar entre todas las que tu grupo haya activado (cuesta un poco de experiencia)."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Activé una waystone" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "armadura", "x": 12.5, "y": 1.5, "deps": ["hierro"], "shape": "diamond", "size": 1.5, "icon": "minecraft:iron_chestplate",
+      "title": "&6Listos para el camino",
+      "desc": [
+        "Ponte tu primera pieza de armadura.",
+        "",
+        "Con refugio, comida y hierro ya pueden salir a explorar. El siguiente capítulo, &6El pueblo&r, los espera."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:story/obtain_armor" } ],
+      "rewards": [ { "type": "xp", "xp": 50 }, { "type": "item", "item": "minecraft:iron_ingot", "count": 4 } ]
+    }
+  ]
+}

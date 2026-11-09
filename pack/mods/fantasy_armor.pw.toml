@@ -1,0 +1,13 @@
+name = "Fantasy Armor (Medieval Series)"
+filename = "fantasy-armor-1.3.1-1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/oVmpjYQ5/versions/zp0jA17O/fantasy-armor-1.3.1-1.21.1-neoforge.jar"
+hash-format = "sha512"
+hash = "44d055a9a5892f342bc16f4c0c489f49b2b68babf3a1dd244b450792aa49e27b99785f72faee3092ab3869c3e2b476c303873ff3f79eee446ec6c879838daa22"
+
+[update]
+[update.modrinth]
+mod-id = "oVmpjYQ5"
+version = "zp0jA17O"

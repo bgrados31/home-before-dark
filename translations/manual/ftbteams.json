@@ -1,0 +1,19 @@
+{
+"ftbteams.config.server.limited_lives": "Vidas limitadas del equipo",
+"ftbteams.config.server.max_party_size": "Tamaño máximo del grupo",
+"ftbteams.disbanded_no_lives": "¡Tu grupo se disolvió porque se quedó sin vidas ni jugadores!",
+"ftbteams.kicked_no_lives": "¡%s fue expulsado porque murió y tu grupo no tiene vidas!",
+"ftbteams.lost_a_life": "¡Tu grupo perdió una vida! Quedan %s / %s vidas",
+"ftbteams.message.added_stage": "Etapa de equipo añadida: %s",
+"ftbteams.message.limited_lives": "¡A tu grupo le quedan %s / %s vidas!",
+"ftbteams.message.limited_lives.warn": "¡Si mueres, te expulsarán del grupo!",
+"ftbteams.message.no_team_stages": "Este equipo no tiene etapas",
+"ftbteams.message.parse_failed": "No se pudo leer el valor: %s",
+"ftbteams.message.property_not_editable": "¡La propiedad %s no se puede editar!",
+"ftbteams.message.removed_stage": "Etapa de equipo eliminada: %s",
+"ftbteams.message.set_property": "Propiedad %s cambiada a %s",
+"ftbteams.message.team_stages_header": "%s etapa(s) de este equipo:",
+"ftbteams.out_of_lives": "¡Tu grupo se quedó sin vidas! No puedes invitar a nadie",
+"ftbteams.party_full": "¡Tu grupo está lleno! Máximo %s miembro(s)",
+"ftbteams.team_already_exists": "¡El equipo %s ya existe!"
+}

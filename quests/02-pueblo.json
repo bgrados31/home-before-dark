@@ -1,0 +1,88 @@
+{
+  "key": "pueblo",
+  "group": "historia",
+  "order": 1,
+  "icon": "minecraft:bell",
+  "title": "&6El pueblo",
+  "subtitle": "Vecinos, encargos y un ejército propio",
+  "background": { "season": "Spring", "frame": 20 },
+  "quests": [
+    {
+      "key": "aldea", "x": 0, "y": 0, "shape": "gear", "size": 2, "icon": "minecraft:bell",
+      "title": "&6Encuentra una aldea",
+      "desc": [
+        "Explora hasta dar con una aldea. En este pack cada bioma tiene la suya, con más casas, granjas y defensas.",
+        "",
+        "Si no aparece ninguna, fabrica una &6Explorer's Compass&r: te señala la estructura que elijas."
+      ],
+      "tasks": [ { "type": "structure", "structure": "#minecraft:village" } ],
+      "rewards": [ { "type": "xp", "xp": 50 }, { "type": "item", "item": "minecraft:emerald", "count": 5 } ]
+    },
+    {
+      "key": "trato", "x": 2.5, "y": -1.5, "deps": ["aldea"], "icon": "minecraft:emerald",
+      "title": "Primer trato",
+      "desc": [
+        "Comercia con un aldeano.",
+        "",
+        "Si las ofertas de un aldeano que aún no ha comerciado no te sirven, puedes cambiarlas desde su ventana de comercio (&6Trade Cycling&r)."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:adventure/trade" } ],
+      "rewards": [ { "type": "xp", "xp": 30 }, { "type": "item", "item": "minecraft:emerald", "count": 3 } ]
+    },
+    {
+      "key": "tablon", "x": 2.5, "y": 1.5, "deps": ["aldea"], "icon": "bountiful:bountyboard",
+      "title": "El tablón de recompensas",
+      "desc": [
+        "Muchas aldeas tienen un &6tablón de recompensas&r. Ahí aparecen encargos: traer objetos o cazar criaturas a cambio de premios.",
+        "",
+        "Toma un encargo, consigue lo que pide y vuelve al tablón para cobrarlo."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Cobré un encargo" } ],
+      "rewards": [ { "type": "xp", "xp": 40 }, { "type": "item", "item": "minecraft:emerald", "count": 5 } ]
+    },
+    {
+      "key": "guardias", "x": 5, "y": -1.5, "deps": ["trato"], "icon": "minecraft:iron_sword",
+      "title": "Los guardias",
+      "desc": [
+        "Las aldeas tienen &6guardias&r que las defienden de los monstruos.",
+        "",
+        "Puedes darles mejores armas y armaduras para que aguanten las noches más duras."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Conocí a los guardias" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "reclutas", "x": 5, "y": 1.5, "deps": ["tablon"], "icon": "minecraft:shield",
+      "title": "Tu propio ejército",
+      "desc": [
+        "Con &6Villager Recruits&r puedes contratar soldados pagando con esmeraldas.",
+        "",
+        "Desde su menú les das órdenes: seguirte, quedarse de guardia o atacar. Con la tecla &6J&r abres el panel de órdenes para todo tu grupo de soldados.", "", "Son perfectos para defender el pueblo del grupo mientras ustedes exploran."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Contraté un recluta" } ],
+      "rewards": [ { "type": "xp", "xp": 40 }, { "type": "item", "item": "minecraft:emerald", "count": 10 } ]
+    },
+    {
+      "key": "botin", "x": 7.5, "y": 0, "deps": ["guardias", "reclutas"], "icon": "minecraft:chest",
+      "title": "Botín para todos",
+      "desc": [
+        "Gracias a &6Lootr&r, cada jugador encuentra su propio botín en los cofres de las estructuras.",
+        "",
+        "Nadie se queda sin nada por llegar segundo: cada uno abre su parte."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Entendido" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "heroe", "x": 10, "y": 0, "deps": ["botin"], "shape": "pentagon", "size": 1.5, "icon": "minecraft:white_banner",
+      "title": "&6Héroe de la aldea",
+      "desc": [
+        "Defiende una aldea de una invasión de saqueadores.",
+        "",
+        "Prepárense bien: armadura, escudo, comida, reclutas... y amigos."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:adventure/hero_of_the_village" } ],
+      "rewards": [ { "type": "xp_levels", "levels": 5 }, { "type": "item", "item": "minecraft:emerald", "count": 16 } ]
+    }
+  ]
+}

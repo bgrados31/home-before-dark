@@ -1,0 +1,108 @@
+{
+  "key": "campamento",
+  "group": "oficios",
+  "order": 11,
+  "icon": "travelersbackpack:standard",
+  "title": "&bCampamento y exploración",
+  "subtitle": "Viajar lejos y volver a casa",
+  "background": { "season": "Summer", "frame": 10 },
+  "quests": [
+    {
+      "key": "mochila_viajero", "x": 0, "y": 0, "shape": "gear", "size": 2, "icon": "travelersbackpack:standard",
+      "title": "&bLa mochila del viajero",
+      "desc": [
+        "La mochila de &6Traveler's Backpack&r lleva dos tanques de líquidos, una mesa de trabajo y un saco de dormir.",
+        "",
+        "Fabricada con materiales distintos (de dragón, de mob, de bioma...) da habilidades especiales. Se lleva en la espalda y se coloca en el suelo."
+      ],
+      "tasks": [ { "type": "item", "item": "travelersbackpack:standard" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "saco", "x": 2.5, "y": -1.5, "deps": ["mochila_viajero"], "icon": "travelersbackpack:white_sleeping_bag",
+      "title": "Dormir al raso",
+      "desc": [
+        "Un saco de dormir para las expediciones. Pasas la noche sin cambiar el punto donde reapareces: tu hogar sigue siendo tu casa.",
+        "",
+        "También hay sacos y hamacas de &6Comforts&r."
+      ],
+      "tasks": [ { "type": "item", "item": "travelersbackpack:white_sleeping_bag" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "fogata", "x": 2.5, "y": 1.5, "deps": ["mochila_viajero"], "icon": "minecraft:campfire",
+      "title": "Fogata de campamento",
+      "desc": [
+        "Cocina sobre la fogata sin gastar carbón. Con un fardo de heno debajo, el humo sube muy alto: sirve de señal para que el grupo te encuentre.",
+        "",
+        "Con la olla de Farmer's Delight encima, el campamento tiene cocina."
+      ],
+      "tasks": [ { "type": "item", "item": "minecraft:campfire" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "hamaca", "x": 5, "y": -3, "deps": ["saco"], "optional": true, "icon": "comforts:hammock_white",
+      "title": "Una siesta de día",
+      "desc": [ "La hamaca de &6Comforts&r te deja dormir de día hasta que anochezca. Útil para viajar de noche a propósito." ],
+      "tasks": [ { "type": "item", "item": "comforts:hammock_white" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "brujula_biomas", "x": 5, "y": -1, "deps": ["saco"], "icon": "naturescompass:naturescompass",
+      "title": "Buscar paisajes",
+      "desc": [ "La &6Nature's Compass&r te lleva al bioma que elijas: más de cien con Terralith y Regions Unexplored." ],
+      "tasks": [ { "type": "item", "item": "naturescompass:naturescompass" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "brujula_estructuras", "x": 5, "y": 1, "deps": ["fogata"], "icon": "explorerscompass:explorerscompass",
+      "title": "Buscar estructuras",
+      "desc": [ "La &6Explorer's Compass&r señala aldeas, torres, mazmorras y ruinas. Ideal para planear la próxima expedición." ],
+      "tasks": [ { "type": "item", "item": "explorerscompass:explorerscompass" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "rio", "x": 7.5, "y": -2.5, "deps": ["brujula_biomas"], "optional": true, "icon": "minecraft:sand",
+      "title": "Ríos de arena",
+      "desc": [ "Con &6River Redux&r los ríos tienen variantes: de arena, de grava y tropicales. Encuentra un río de arena." ],
+      "tasks": [ { "type": "biome", "biome": "riverredux:sandy_river" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "arces", "x": 7.5, "y": -1, "deps": ["brujula_biomas"], "optional": true, "icon": "minecraft:orange_dye",
+      "title": "Bosque de arces en otoño",
+      "desc": [ "Un bosque de arces de &6Regions Unexplored&r. En otoño (con Serene Seasons) es de los lugares más bonitos del mundo." ],
+      "tasks": [ { "type": "biome", "biome": "regions_unexplored:autumnal_maple_forest" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "cerezos", "x": 7.5, "y": 0.5, "deps": ["brujula_biomas"], "optional": true, "icon": "minecraft:cherry_sapling",
+      "title": "Bosque de cerezos",
+      "desc": [ "Encuentra un bosque de cerezos. Con shaders (&6F6&r) y en primavera, es la foto perfecta." ],
+      "tasks": [ { "type": "biome", "biome": "minecraft:cherry_grove" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "foto", "x": 10, "y": -1, "deps": ["arces"], "shape": "diamond", "size": 1.3, "icon": "minecraft:painting",
+      "title": "Una foto para el recuerdo",
+      "desc": [
+        "Busquen un lugar bonito, activen los shaders con &6F6&r, escondan la interfaz con &6F1&r y saquen una foto con &6F2&r.",
+        "",
+        "Las fotos se guardan en la carpeta &6screenshots&r de la instancia. ¡El recuerdo del viaje!"
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Saqué la foto" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "lejos", "x": 10, "y": 1.5, "deps": ["brujula_estructuras"], "shape": "pentagon", "size": 1.5, "icon": "minecraft:filled_map",
+      "title": "&bLejos de casa",
+      "desc": [
+        "El gran reto del viajero: completar el logro &6Hora de aventuras&r, que pide pisar todos los biomas de Minecraft normal (la pantalla de logros, tecla &6L&r, muestra cuáles faltan).",
+        "",
+        "Es para muchas semanas de viaje. Activen &6waystones&r por el camino para volver a casa antes del anochecer."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:adventure/adventuring_time" } ],
+      "rewards": [ { "type": "xp_levels", "levels": 10 } ]
+    }
+  ]
+}

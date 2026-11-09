@@ -1,0 +1,123 @@
+{
+  "key": "clases",
+  "group": "historia",
+  "order": 3,
+  "icon": "wizards:wand_novice",
+  "title": "&6Elige tu camino",
+  "subtitle": "Clases, hechizos y árbol de habilidades",
+  "background": { "season": "Winter", "frame": 40 },
+  "quests": [
+    {
+      "key": "caminos", "x": 0, "y": 0, "shape": "gear", "size": 2, "icon": "minecraft:book",
+      "title": "&6Los caminos del aventurero",
+      "desc": [
+        "En Home Before Dark cada uno puede especializarse: &5mago&r, &epaladín&r o &fsacerdote&r, &8pícaro&r o &cguerrero&r, y &aarquero&r.",
+        "",
+        "Cada clase tiene su mesa de artesano (se encuentran en casas de las aldeas), sus armas, sus armaduras y sus hechizos.",
+        "",
+        "Las misiones de este capítulo son opcionales: completen la de su camino. Un grupo con clases distintas es mucho más fuerte."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Entendido" } ],
+      "rewards": [ { "type": "xp", "xp": 20 } ]
+    },
+    {
+      "key": "habilidades", "x": 0, "y": -3, "deps": ["caminos"], "shape": "diamond", "size": 1.5, "icon": "minecraft:experience_bottle",
+      "title": "El árbol de habilidades",
+      "desc": [
+        "Pulsa &6K&r para abrir tu árbol de habilidades (&6Pufferfish's Skills&r).",
+        "",
+        "Al pelear y avanzar ganas puntos que gastas en nodos: más vida, más daño, hechizos más fuertes o defensa. Cada clase tiene ramas propias.",
+        "",
+        "No hay prisa: piensa hacia dónde quieres llevar a tu personaje."
+      ],
+      "tasks": [ { "type": "checkmark", "title": "Abrí mi árbol" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "vinculacion", "x": 3, "y": 0, "deps": ["caminos"], "icon": "spell_engine:spell_binding",
+      "title": "La mesa de vinculación",
+      "desc": [
+        "Con la &6mesa de vinculación&r (Spell Engine) unes hechizos a tus armas de clase y libros.",
+        "",
+        "Pon el arma o el libro, elige el hechizo y paga con experiencia y lapislázuli."
+      ],
+      "tasks": [ { "type": "item", "item": "spell_engine:spell_binding" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "mago", "x": 6, "y": -3, "deps": ["vinculacion"], "optional": true, "icon": "wizards:wand_novice",
+      "title": "&5Camino del mago",
+      "desc": [ "Varitas y bastones de magia &5arcana&r, de &cfuego&r o de &bescarcha&r. Daño a distancia enorme, pero poca armadura: quédate detrás del guerrero." ],
+      "tasks": [ { "type": "item", "item": "wizards:wand_novice" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "paladin", "x": 6, "y": -1.5, "deps": ["vinculacion"], "optional": true, "icon": "paladins:iron_kite_shield",
+      "title": "&eCamino del paladín",
+      "desc": [ "Mazas, mandobles y escudos de cometa. Aguanta golpes, protege al grupo y cura un poco con magia sagrada." ],
+      "tasks": [ { "type": "item", "item": "paladins:iron_kite_shield" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "sacerdote", "x": 6, "y": 0, "deps": ["vinculacion"], "optional": true, "icon": "paladins:acolyte_wand",
+      "title": "&fCamino del sacerdote",
+      "desc": [ "El sanador del grupo: cura, pone escudos y bendice a los aliados. Todo grupo lo agradece en las peleas con jefes." ],
+      "tasks": [ { "type": "item", "item": "paladins:acolyte_wand" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "picaro", "x": 6, "y": 1.5, "deps": ["vinculacion"], "optional": true, "icon": "rogues:iron_dagger",
+      "title": "&8Camino del pícaro",
+      "desc": [ "Dagas y hoces rápidas, sigilo y golpes por la espalda. Entra, golpea y desaparece." ],
+      "tasks": [ { "type": "item", "item": "rogues:iron_dagger" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "guerrero", "x": 6, "y": 3, "deps": ["vinculacion"], "optional": true, "icon": "rogues:iron_double_axe",
+      "title": "&cCamino del guerrero",
+      "desc": [ "Hachas dobles y gritos de guerra. Golpea a varios enemigos a la vez y aguanta en primera línea." ],
+      "tasks": [ { "type": "item", "item": "rogues:iron_double_axe" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "arquero", "x": 6, "y": 4.5, "deps": ["vinculacion"], "optional": true, "icon": "archers:composite_longbow",
+      "title": "&aCamino del arquero",
+      "desc": [ "Arcos largos, ballestas y lanzas. Disparos cargados, flechas especiales y mucha movilidad." ],
+      "tasks": [ { "type": "item", "item": "archers:composite_longbow" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "joyero", "x": 3, "y": 3, "deps": ["caminos"], "icon": "jewelry:jewelers_kit",
+      "title": "El joyero",
+      "desc": [
+        "Bajo tierra hay &6vetas de gemas&r: rubí, topacio, citrino, jade y zafiro.",
+        "",
+        "Con el kit de joyero fabricas anillos y collares que dan bonificaciones (vida, daño, poder mágico). Se equipan en las ranuras de accesorios (tecla &6G&r)."
+      ],
+      "tasks": [ { "type": "item", "item": "jewelry:jewelers_kit" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "libros", "x": 3, "y": -3, "deps": ["caminos"], "icon": "irons_spellbooks:inscription_table",
+      "title": "Magia de libros",
+      "desc": [
+        "&6Iron's Spells 'n Spellbooks&r: encuentra pergaminos de hechizos en mazmorras e inscríbelos en un libro de hechizos con la mesa de inscripción.",
+        "",
+        "Equipa el libro y lanza con &6V&r; cambia de hechizo con &6X&r."
+      ],
+      "tasks": [ { "type": "item", "item": "irons_spellbooks:inscription_table" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "ars", "x": 3, "y": -4.5, "deps": ["libros"], "optional": true, "icon": "ars_nouveau:novice_spell_book",
+      "title": "Magia creativa",
+      "desc": [
+        "&6Ars Nouveau&r deja diseñar tus propios hechizos combinando glifos: forma, efecto y aumentos.",
+        "",
+        "Empieza con el &6Tomo Andrajoso&r: es una guía completa dentro del juego."
+      ],
+      "tasks": [ { "type": "item", "item": "ars_nouveau:novice_spell_book" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    }
+  ]
+}

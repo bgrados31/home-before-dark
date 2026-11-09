@@ -1,0 +1,118 @@
+{
+  "key": "armeria",
+  "group": "historia",
+  "order": 2,
+  "icon": "magistuarmory:iron_heatershield",
+  "title": "&6Acero y escudo",
+  "subtitle": "Forja, armaduras de caballero y combate de verdad",
+  "background": { "season": "Neutral", "frame": 12 },
+  "quests": [
+    {
+      "key": "yunque", "x": 0, "y": 0, "shape": "gear", "size": 2, "icon": "minecraft:anvil",
+      "title": "&6La forja del pueblo",
+      "desc": [
+        "Toda aldea que se precie tiene una forja. Fabrica un yunque: con él reparas, combinas y nombras tu equipo.",
+        "",
+        "Con &6Easy Anvils&r los objetos se quedan sobre el yunque y reparar sale más barato que en Minecraft normal."
+      ],
+      "tasks": [ { "type": "item", "item": "minecraft:anvil" } ],
+      "rewards": [ { "type": "xp", "xp": 40 }, { "type": "item", "item": "minecraft:iron_ingot", "count": 4 } ]
+    },
+    {
+      "key": "combate", "x": 2.5, "y": -2, "deps": ["yunque"], "icon": "minecraft:iron_sword",
+      "title": "Combate de verdad",
+      "desc": [
+        "Con &6Better Combat&r cada arma se maneja distinto: las espadas cortan en arco, las lanzas pinchan lejos, las hachas dobles golpean a varios.",
+        "",
+        "Mantén el clic para encadenar combos. Las armas a dos manos pegan más fuerte pero no permiten escudo.",
+        "",
+        "Pulsa &6R&r para rodar y esquivar (&6Combat Roll&r)."
+      ],
+      "tasks": [ { "type": "kill", "entity": "minecraft:zombie", "count": 10 } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "escudo", "x": 2.5, "y": 0, "deps": ["yunque"],
+      "title": "Un escudo con escudo de armas",
+      "desc": [
+        "&6Epic Knights&r añade escudos de muchas formas: de lágrima, redondos, de torre...",
+        "",
+        "Combínalos con un estandarte en la mesa de trabajo para pintarles la heráldica de tu familia o de tu pueblo."
+      ],
+      "tasks": [ { "type": "item", "item": "magistuarmory:iron_heatershield" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "arma_estilo", "x": 2.5, "y": 2, "deps": ["yunque"],
+      "title": "Un arma con estilo",
+      "desc": [
+        "&6Simply Swords&r trae katanas, estoques, alfanjes, sais, lanzas y guadañas, cada una con su forma de pelear.",
+        "",
+        "Prueben varias: el grupo funciona mejor si cada uno tiene su estilo."
+      ],
+      "tasks": [ { "type": "item", "item": "simplyswords:iron_katana" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "caballero", "x": 5, "y": 0, "deps": ["escudo"], "shape": "diamond", "size": 1.5,
+      "title": "&6Armadura de caballero",
+      "desc": [
+        "La armadura de caballero de &6Epic Knights&r protege más que la de hierro normal y se ve imponente.",
+        "",
+        "Hay decenas de piezas: yelmos, gambesones, cotas de malla, armaduras de cruzado... Revisen EMI para verlas todas."
+      ],
+      "tasks": [ { "type": "item", "item": "magistuarmory:knight_chestplate" } ],
+      "rewards": [ { "type": "xp", "xp": 60 }, { "type": "item", "item": "minecraft:iron_ingot", "count": 8 } ]
+    },
+    {
+      "key": "yelmo", "x": 7.5, "y": -1.5, "deps": ["caballero"], "optional": true,
+      "title": "Un yelmo cerrado",
+      "desc": [ "El armet cubre toda la cabeza. Perfecto para el caballero del grupo." ],
+      "tasks": [ { "type": "item", "item": "magistuarmory:armet" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "cruzado", "x": 7.5, "y": 1.5, "deps": ["caballero"], "optional": true,
+      "title": "Armadura de cruzado",
+      "desc": [ "Otra armadura pesada de &6Epic Knights&r, con su propio estilo. Ideal para el escuadrón del pueblo." ],
+      "tasks": [ { "type": "item", "item": "magistuarmory:crusader_chestplate" } ],
+      "rewards": [ { "type": "xp", "xp": 30 } ]
+    },
+    {
+      "key": "encantar", "x": 5, "y": -3, "deps": ["combate"], "icon": "minecraft:enchanting_table",
+      "title": "Primer encantamiento",
+      "desc": [
+        "Encanta un objeto. Con &6Easy Magic&r la mesa guarda el lapislázuli y los objetos, y puedes volver a tirar las opciones.",
+        "",
+        "Pasa el cursor por un encantamiento para leer qué hace (&6Enchantment Descriptions&r)."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:story/enchant_item" } ],
+      "rewards": [ { "type": "xp", "xp": 40 }, { "type": "item", "item": "minecraft:lapis_lazuli", "count": 16 } ]
+    },
+    {
+      "key": "diamantes", "x": 5, "y": 3, "deps": ["arma_estilo"], "icon": "minecraft:diamond",
+      "title": "¡Diamantes!",
+      "desc": [ "Los diamantes están en lo más hondo. Con &6Tectonic&r las montañas son enormes: excavar dentro de una suele dar buenas cuevas." ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:story/mine_diamond" } ],
+      "rewards": [ { "type": "xp", "xp": 50 } ]
+    },
+    {
+      "key": "adornos", "x": 10, "y": 3, "deps": ["diamantes"], "optional": true, "icon": "minecraft:sentry_armor_trim_smithing_template",
+      "title": "Forja con estilo",
+      "desc": [ "Aplica un adorno a una armadura en la mesa de herrería. Con el pack &6Visual Armor Trims&r también se ve en el inventario." ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:adventure/trim_with_any_armor_pattern" } ],
+      "rewards": [ { "type": "xp", "xp": 40 } ]
+    },
+    {
+      "key": "diamante_total", "x": 10, "y": 0, "deps": ["caballero", "diamantes"], "shape": "pentagon", "size": 1.5, "icon": "minecraft:diamond_chestplate",
+      "title": "&6Listos para la batalla",
+      "desc": [
+        "Equípate con armadura de diamante completa.",
+        "",
+        "Ya pueden plantarle cara a las mazmorras grandes. El siguiente paso: elegir un camino (&6Elige tu camino&r)."
+      ],
+      "tasks": [ { "type": "advancement", "advancement": "minecraft:story/shiny_gear" } ],
+      "rewards": [ { "type": "xp_levels", "levels": 5 }, { "type": "item", "item": "minecraft:golden_apple", "count": 2 } ]
+    }
+  ]
+}

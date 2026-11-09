@@ -1,0 +1,131 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "clases"
+	group: "41B1A2E73B8E222B"
+	icon: { id: "wizards:wand_novice" }
+	id: "664B58DAE8CA74F2"
+	order_index: 3
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "minecraft:book" }
+			id: "09CA8B5018B42ADC"
+			rewards: [{ id: "773BD667CAC0919D", type: "xp", xp: 20 }]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{ id: "5F5E75EA2AF6A713", type: "checkmark" }]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09CA8B5018B42ADC"]
+			icon: { id: "minecraft:experience_bottle" }
+			id: "6E8E09FA82F2F0BA"
+			rewards: [{ id: "6D7F2AB032C318A2", type: "xp", xp: 30 }]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{ id: "33268AEE25B912ED", type: "checkmark" }]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["09CA8B5018B42ADC"]
+			icon: { id: "spell_engine:spell_binding" }
+			id: "09CEC41997795FDB"
+			rewards: [{ id: "7EFCBBA224494C88", type: "xp", xp: 40 }]
+			tasks: [{ id: "16BD2674DA663DED", item: { count: 1, id: "spell_engine:spell_binding" }, type: "item" }]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09CEC41997795FDB"]
+			icon: { id: "wizards:wand_novice" }
+			id: "217740B07B0A6783"
+			optional: true
+			rewards: [{ id: "020CDB305773A07B", type: "xp", xp: 30 }]
+			tasks: [{ id: "7B6DCD766F774B99", item: { count: 1, id: "wizards:wand_novice" }, type: "item" }]
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["09CEC41997795FDB"]
+			icon: { id: "paladins:iron_kite_shield" }
+			id: "3A1221F0BA5E3713"
+			optional: true
+			rewards: [{ id: "5B980641AA1D7985", type: "xp", xp: 30 }]
+			tasks: [{ id: "30D0B01F11D2D783", item: { count: 1, id: "paladins:iron_kite_shield" }, type: "item" }]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["09CEC41997795FDB"]
+			icon: { id: "paladins:acolyte_wand" }
+			id: "089E7C5B59828793"
+			optional: true
+			rewards: [{ id: "4E8DA82EC35EE039", type: "xp", xp: 30 }]
+			tasks: [{ id: "5E6704C7B2FE175D", item: { count: 1, id: "paladins:acolyte_wand" }, type: "item" }]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09CEC41997795FDB"]
+			icon: { id: "rogues:iron_dagger" }
+			id: "2EBB5A620006AA42"
+			optional: true
+			rewards: [{ id: "3D73A07F195C3CCE", type: "xp", xp: 30 }]
+			tasks: [{ id: "74DB9F2CCAE62152", item: { count: 1, id: "rogues:iron_dagger" }, type: "item" }]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["09CEC41997795FDB"]
+			icon: { id: "rogues:iron_double_axe" }
+			id: "01154AA370D77D25"
+			optional: true
+			rewards: [{ id: "37EEE9B76D6042AC", type: "xp", xp: 30 }]
+			tasks: [{ id: "5AEFB809C526EF2D", item: { count: 1, id: "rogues:iron_double_axe" }, type: "item" }]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["09CEC41997795FDB"]
+			icon: { id: "archers:composite_longbow" }
+			id: "1A57E8B6259E306D"
+			optional: true
+			rewards: [{ id: "5295FA6A67A074A2", type: "xp", xp: 30 }]
+			tasks: [{ id: "3788A0EBC90A1507", item: { count: 1, id: "archers:composite_longbow" }, type: "item" }]
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["09CA8B5018B42ADC"]
+			icon: { id: "jewelry:jewelers_kit" }
+			id: "78BEEB3C423CD53C"
+			rewards: [{ id: "0A30E12CCC35124E", type: "xp", xp: 40 }]
+			tasks: [{ id: "2D97AE0EA030DD24", item: { count: 1, id: "jewelry:jewelers_kit" }, type: "item" }]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["09CA8B5018B42ADC"]
+			icon: { id: "irons_spellbooks:inscription_table" }
+			id: "02037516962C053E"
+			rewards: [{ id: "744DAA79875A102C", type: "xp", xp: 40 }]
+			tasks: [{ id: "52BE875177370EAF", item: { count: 1, id: "irons_spellbooks:inscription_table" }, type: "item" }]
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["02037516962C053E"]
+			icon: { id: "ars_nouveau:novice_spell_book" }
+			id: "10C3018BD83D9720"
+			optional: true
+			rewards: [{ id: "19DACA28CA146139", type: "xp", xp: 40 }]
+			tasks: [{ id: "64E46CF2743D7598", item: { count: 1, id: "ars_nouveau:novice_spell_book" }, type: "item" }]
+			x: 3.0d
+			y: -4.5d
+		}
+	]
+}

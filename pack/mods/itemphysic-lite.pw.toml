@@ -1,0 +1,13 @@
+name = "ItemPhysic Lite"
+filename = "ItemPhysicLite_NEOFORGE_v1.6.13_mc1.21.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/OuyCgP8t/versions/KyZkwHoQ/ItemPhysicLite_NEOFORGE_v1.6.13_mc1.21.1.jar"
+hash-format = "sha512"
+hash = "85598a59ec3e4bb32a4e2d5a4df0822d0926307fad504579b8f828059f59585fa86248935bd08d61b4bf6170404949624580e1b0141f37356be4784199f6fb76"
+
+[update]
+[update.modrinth]
+mod-id = "OuyCgP8t"
+version = "KyZkwHoQ"

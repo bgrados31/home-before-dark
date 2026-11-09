@@ -1,0 +1,13 @@
+name = "Fast Better Grass - Regions Unexplored Compat"
+filename = "Fast Better Grass - Regions Unexplored Compat.zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/iqx7cWHp/versions/N36eSf3l/Fast%20Better%20Grass%20-%20Regions%20Unexplored%20Compat.zip"
+hash-format = "sha512"
+hash = "79c5712cc7df9f7dd1d28f60a3a5b56d073ec455784718c8675aac2b54977085002f3854cdb29cc5f4c67a81989224603bb647869c75cc5e6ba134ef311a75eb"
+
+[update]
+[update.modrinth]
+mod-id = "iqx7cWHp"
+version = "N36eSf3l"

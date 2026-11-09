@@ -1,0 +1,115 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "armeria"
+	group: "41B1A2E73B8E222B"
+	icon: { id: "magistuarmory:iron_heatershield" }
+	id: "0833DFC7EF70230E"
+	order_index: 2
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "minecraft:anvil" }
+			id: "312DAFC749695DFB"
+			rewards: [{ id: "4D2B9D83B914E692", type: "xp", xp: 40 }, { count: 4, id: "163CEDD89679219E", item: { count: 1, id: "minecraft:iron_ingot" }, type: "item" }]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{ id: "262A4B2DA92E9393", item: { count: 1, id: "minecraft:anvil" }, type: "item" }]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["312DAFC749695DFB"]
+			icon: { id: "minecraft:iron_sword" }
+			id: "410E164AB625EF02"
+			rewards: [{ id: "1D90F28D8AC34D16", type: "xp", xp: 30 }]
+			tasks: [{ entity: "minecraft:zombie", id: "736EF7E79E30702D", type: "kill", value: 10L }]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["312DAFC749695DFB"]
+			id: "0292B95B7236166A"
+			rewards: [{ id: "794F9CFB7019EE38", type: "xp", xp: 30 }]
+			tasks: [{ id: "27F61F7342294BC4", item: { count: 1, id: "magistuarmory:iron_heatershield" }, type: "item" }]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["312DAFC749695DFB"]
+			id: "7ED75F0964C11BDD"
+			rewards: [{ id: "2FEE3807F6738C88", type: "xp", xp: 30 }]
+			tasks: [{ id: "1203C46D345284E3", item: { count: 1, id: "simplyswords:iron_katana" }, type: "item" }]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0292B95B7236166A"]
+			id: "31EFBAE7CF800AD8"
+			rewards: [{ id: "4DFAD6854F6EDDC9", type: "xp", xp: 60 }, { count: 8, id: "06214EE2BCE5AF6D", item: { count: 1, id: "minecraft:iron_ingot" }, type: "item" }]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{ id: "53DACE15E195BFC3", item: { count: 1, id: "magistuarmory:knight_chestplate" }, type: "item" }]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["31EFBAE7CF800AD8"]
+			id: "54EEBC2AAFDF969D"
+			optional: true
+			rewards: [{ id: "35927B4908BE86E2", type: "xp", xp: 30 }]
+			tasks: [{ id: "18ED02F45CC0D7FC", item: { count: 1, id: "magistuarmory:armet" }, type: "item" }]
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["31EFBAE7CF800AD8"]
+			id: "53878A8D89BE90F5"
+			optional: true
+			rewards: [{ id: "1DB366F0EEE5329B", type: "xp", xp: 30 }]
+			tasks: [{ id: "038D944F76F7284C", item: { count: 1, id: "magistuarmory:crusader_chestplate" }, type: "item" }]
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["410E164AB625EF02"]
+			icon: { id: "minecraft:enchanting_table" }
+			id: "7AFA98463A765B65"
+			rewards: [{ id: "544E0BA1419160C9", type: "xp", xp: 40 }, { count: 16, id: "642D3FF5826387BF", item: { count: 1, id: "minecraft:lapis_lazuli" }, type: "item" }]
+			tasks: [{ advancement: "minecraft:story/enchant_item", criterion: "", id: "07EF6DE392622D08", type: "advancement" }]
+			x: 5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7ED75F0964C11BDD"]
+			icon: { id: "minecraft:diamond" }
+			id: "4AA62CE91009AD54"
+			rewards: [{ id: "77D6E777FA3E46E3", type: "xp", xp: 50 }]
+			tasks: [{ advancement: "minecraft:story/mine_diamond", criterion: "", id: "6C79ACD520D6ADD5", type: "advancement" }]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4AA62CE91009AD54"]
+			icon: { id: "minecraft:sentry_armor_trim_smithing_template" }
+			id: "3F8C4D58FFC6FF6C"
+			optional: true
+			rewards: [{ id: "5179B6FC6DDA4C74", type: "xp", xp: 40 }]
+			tasks: [{ advancement: "minecraft:adventure/trim_with_any_armor_pattern", criterion: "", id: "6E8AD8D82B821ADB", type: "advancement" }]
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["31EFBAE7CF800AD8", "4AA62CE91009AD54"]
+			icon: { id: "minecraft:diamond_chestplate" }
+			id: "1D7B39CFF98937F1"
+			rewards: [{ id: "164617E449655554", type: "xp_levels", xp_levels: 5 }, { count: 2, id: "0DE5BC555F8E4C9B", item: { count: 1, id: "minecraft:golden_apple" }, type: "item" }]
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{ advancement: "minecraft:story/shiny_gear", criterion: "", id: "7BAAD8E8B986473F", type: "advancement" }]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+}

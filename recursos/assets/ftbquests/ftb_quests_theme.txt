@@ -1,0 +1,21 @@
+// Home Before Dark - fondo completo del libro de misiones (lo genera scripts\make-quests.ps1)
+[*]
+background: homebeforedark:textures/misiones/hogar.png
+
+[2BB725A299A04B21]
+background: homebeforedark:textures/misiones/hogar.png
+
+[16A229E2934A8BF6]
+background: homebeforedark:textures/misiones/pueblo.png
+
+[0833DFC7EF70230E]
+background: homebeforedark:textures/misiones/armeria.png
+
+[664B58DAE8CA74F2]
+background: homebeforedark:textures/misiones/clases.png
+
+[634A761B93ADE37E]
+background: homebeforedark:textures/misiones/almacen.png
+
+[0B2954517DB5E7C4]
+background: homebeforedark:textures/misiones/campamento.png

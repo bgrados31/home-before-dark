@@ -1,0 +1,79 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "pueblo"
+	group: "41B1A2E73B8E222B"
+	icon: { id: "minecraft:bell" }
+	id: "16A229E2934A8BF6"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "minecraft:bell" }
+			id: "11ADEE57DC612E69"
+			rewards: [{ id: "565EE71694EDB483", type: "xp", xp: 50 }, { count: 5, id: "0F20871A33E23354", item: { count: 1, id: "minecraft:emerald" }, type: "item" }]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{ id: "5F44D24D86784720", structure: "#minecraft:village", type: "structure" }]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["11ADEE57DC612E69"]
+			icon: { id: "minecraft:emerald" }
+			id: "5D4D752087665199"
+			rewards: [{ id: "2CE4F6B018F7EBCD", type: "xp", xp: 30 }, { count: 3, id: "26CDAB3097AFA8D2", item: { count: 1, id: "minecraft:emerald" }, type: "item" }]
+			tasks: [{ advancement: "minecraft:adventure/trade", criterion: "", id: "14C253E4AB122704", type: "advancement" }]
+			x: 2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["11ADEE57DC612E69"]
+			icon: { id: "bountiful:bountyboard" }
+			id: "1C32CE5FDB3B255E"
+			rewards: [{ id: "7B141B7C4DFEA8EC", type: "xp", xp: 40 }, { count: 5, id: "74F55E7F43D2BF23", item: { count: 1, id: "minecraft:emerald" }, type: "item" }]
+			tasks: [{ id: "0B4F53715B61BA3D", type: "checkmark" }]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5D4D752087665199"]
+			icon: { id: "minecraft:iron_sword" }
+			id: "1CD448006E35D893"
+			rewards: [{ id: "412F9CD4874CB061", type: "xp", xp: 20 }]
+			tasks: [{ id: "1CB76FB6DA232846", type: "checkmark" }]
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1C32CE5FDB3B255E"]
+			icon: { id: "minecraft:shield" }
+			id: "331EF3B08DA5B13E"
+			rewards: [{ id: "19FD2EBB9C827133", type: "xp", xp: 40 }, { count: 10, id: "68A06A7CC21C1B34", item: { count: 1, id: "minecraft:emerald" }, type: "item" }]
+			tasks: [{ id: "1F6A709D11284441", type: "checkmark" }]
+			x: 5.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1CD448006E35D893", "331EF3B08DA5B13E"]
+			icon: { id: "minecraft:chest" }
+			id: "6E1E2B26335C2EDA"
+			rewards: [{ id: "159CEBA069666580", type: "xp", xp: 20 }]
+			tasks: [{ id: "5253554582E413D5", type: "checkmark" }]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6E1E2B26335C2EDA"]
+			icon: { id: "minecraft:white_banner" }
+			id: "0DB202170EF2478C"
+			rewards: [{ id: "58A505E23A13617C", type: "xp_levels", xp_levels: 5 }, { count: 16, id: "72F80FC3106FA227", item: { count: 1, id: "minecraft:emerald" }, type: "item" }]
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{ advancement: "minecraft:adventure/hero_of_the_village", criterion: "", id: "59393EFE26FEACB5", type: "advancement" }]
+			x: 10.0d
+			y: 0.0d
+		}
+	]
+}

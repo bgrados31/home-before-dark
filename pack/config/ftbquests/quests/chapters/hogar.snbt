@@ -1,0 +1,147 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "hogar"
+	group: "41B1A2E73B8E222B"
+	icon: { id: "minecraft:campfire" }
+	id: "2BB725A299A04B21"
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "ftbquests:book" }
+			id: "5B108840977D51D4"
+			rewards: [{ id: "4084AA72AAAFF79B", type: "xp", xp: 10 }, { count: 8, id: "76C21E96A42F1691", item: { count: 1, id: "minecraft:bread" }, type: "item" }]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{ id: "1020D6D6C51F6B5F", type: "checkmark" }]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5B108840977D51D4"]
+			icon: { id: "minecraft:white_banner" }
+			id: "1712708C53B0FDA8"
+			rewards: [{ id: "4EE482D034071473", type: "xp", xp: 20 }]
+			tasks: [{ id: "35E6C918D0F9917C", type: "checkmark" }]
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5B108840977D51D4"]
+			icon: { id: "minecraft:filled_map" }
+			id: "27F7BC3D8BB2B48A"
+			rewards: [{ id: "725264EE288B7584", type: "xp", xp: 20 }]
+			tasks: [{ id: "36FCEA493C47FDC5", type: "checkmark" }]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5B108840977D51D4"]
+			id: "28231438717C6278"
+			rewards: [{ id: "023B9C4A6AC95BAA", type: "xp", xp: 20 }]
+			tasks: [{ id: "0BF1A32840818531", item: { count: 1, id: "minecraft:crafting_table" }, type: "item" }]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28231438717C6278"]
+			id: "651D41C58E9882F4"
+			rewards: [{ id: "42659259A6F90483", type: "xp", xp: 30 }]
+			tasks: [{ id: "6CE2C33D6717EAB7", item: { count: 1, id: "sophisticatedbackpacks:backpack" }, type: "item" }]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["28231438717C6278"]
+			id: "57CE85879B056E6C"
+			rewards: [{ id: "384F2E2CF31476AC", type: "xp", xp: 20 }, { count: 8, id: "5801AD54A228D9BB", item: { count: 1, id: "minecraft:torch" }, type: "item" }]
+			tasks: [{ id: "1796F535A6B05097", item: { count: 1, id: "minecraft:stone_pickaxe" }, type: "item" }]
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["28231438717C6278"]
+			id: "61303C03C2812176"
+			rewards: [{ id: "121CCA0D4308DC8D", type: "xp", xp: 20 }, { count: 8, id: "0F04B62F2F32C109", item: { count: 1, id: "minecraft:coal" }, type: "item" }]
+			tasks: [{ id: "44A09373D9690FF9", item: { count: 1, id: "minecraft:furnace" }, type: "item" }]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["57CE85879B056E6C"]
+			icon: { id: "minecraft:oak_door" }
+			id: "2D3B1A4B82F900C4"
+			rewards: [{ id: "6CED0235FC3104C8", type: "xp", xp: 25 }, { id: "4E5B9ECF018525DD", item: { count: 1, id: "minecraft:white_bed" }, type: "item" }]
+			tasks: [{ id: "5739EB31951944E9", type: "checkmark" }]
+			x: 7.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["61303C03C2812176"]
+			id: "6FA1C5AE8568EB2C"
+			rewards: [{ id: "2DA35F444BD80917", type: "xp", xp: 25 }]
+			tasks: [{ count: 16L, id: "5EC9D9691D6561AB", item: { count: 1, id: "minecraft:torch" }, type: "item" }]
+			x: 7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2D3B1A4B82F900C4", "6FA1C5AE8568EB2C"]
+			icon: { id: "minecraft:red_bed" }
+			id: "613B793B9D7B1D6A"
+			rewards: [{ id: "6B2B34A86E7E7580", type: "xp", xp: 50 }, { count: 8, id: "12B9040ABCBD16DB", item: { count: 1, id: "minecraft:cooked_beef" }, type: "item" }]
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{ advancement: "minecraft:adventure/sleep_in_bed", criterion: "", id: "3111EEA2202F4083", type: "advancement" }]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28231438717C6278"]
+			icon: { id: "minecraft:wheat_seeds" }
+			id: "2D9AEDCF91610274"
+			rewards: [{ id: "396755CE8983D1B8", type: "xp", xp: 20 }, { count: 8, id: "75F557321B17D146", item: { count: 1, id: "minecraft:bone_meal" }, type: "item" }]
+			tasks: [{ advancement: "minecraft:husbandry/plant_seed", criterion: "", id: "0AADF7BC4949CF19", type: "advancement" }]
+			x: 2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2D9AEDCF91610274", "61303C03C2812176"]
+			id: "735B6296025DEE49"
+			rewards: [{ id: "689AF91F8004FDE3", type: "xp", xp: 30 }, { id: "23E1A787BB891B64", item: { count: 1, id: "farmersdelight:flint_knife" }, type: "item" }]
+			tasks: [{ id: "14453879C2541F30", item: { count: 1, id: "farmersdelight:cooking_pot" }, type: "item" }]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["61303C03C2812176"]
+			icon: { id: "minecraft:iron_ingot" }
+			id: "5CB4869801C64694"
+			rewards: [{ id: "684204BFA9CFA83A", type: "xp", xp: 40 }]
+			tasks: [{ advancement: "minecraft:story/smelt_iron", criterion: "", id: "20CC524EC62A17B9", type: "advancement" }]
+			x: 10.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["613B793B9D7B1D6A"]
+			icon: { id: "waystones:waystone" }
+			id: "79F11D02AE3E0652"
+			rewards: [{ id: "778ACF76D3657116", type: "xp", xp: 30 }]
+			tasks: [{ id: "15E7B4F789323652", type: "checkmark" }]
+			x: 12.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5CB4869801C64694"]
+			icon: { id: "minecraft:iron_chestplate" }
+			id: "362DDB3253A0B224"
+			rewards: [{ id: "2BC24EE4D0439C72", type: "xp", xp: 50 }, { count: 4, id: "486C622D2EA60633", item: { count: 1, id: "minecraft:iron_ingot" }, type: "item" }]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{ advancement: "minecraft:story/obtain_armor", criterion: "", id: "41A394EAAE8B29D8", type: "advancement" }]
+			x: 12.5d
+			y: 1.5d
+		}
+	]
+}

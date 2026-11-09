@@ -1,0 +1,328 @@
+# Home Before Dark - lista de mods del pack (slugs o IDs de Modrinth).
+# Formato:  slug            -> lado según Modrinth
+#           slug @client    -> forzar solo cliente
+#           slug @server    -> forzar solo servidor
+# Las dependencias obligatorias se agregan solas.
+
+## --- Rendimiento ---
+sodium
+iris
+lithium
+modernfix
+ferrite-core
+immediatelyfast
+entityculling
+distanthorizons
+reeses-sodium-options
+sodium-extra
+
+## --- Generación de mundo ---
+tectonic
+terralith
+incendium
+nullscape
+lithostitched
+serene-seasons
+
+## --- Estructuras y exploración ---
+yungs-better-dungeons
+yungs-better-mineshafts
+yungs-better-strongholds
+yungs-better-desert-temples
+yungs-better-jungle-temples
+yungs-better-ocean-monuments
+yungs-better-witch-huts
+yungs-better-nether-fortresses
+yungs-better-end-island
+yungs-bridges
+yungs-extras
+ct-overhaul-village
+towns-and-towers
+dungeons-and-taverns
+explorify
+waystones
+natures-compass
+explorers-compass
+
+## --- Dimensiones, mobs y jefes ---
+cf:227639   # Twilight Forest (CurseForge)
+aether
+deeperdarker
+l_enders-cataclysm
+mowzies-mobs
+alexs-mobs-1.21.1
+friends-and-foes-forge
+naturalist
+artifacts
+
+## --- Combate y magia ---
+better-combat
+combat-roll
+irons-spells-n-spellbooks
+irons-lib           # dependencia no declarada en Modrinth
+ars-nouveau
+curios
+
+## --- Tecnología ---
+create
+create-steam-n-rails-1.21.1
+createaddition
+create-enchantment-industry
+sophisticated-storage
+sophisticated-backpacks
+
+## --- Comida y granja ---
+farmers-delight
+my-nethers-delight
+ends-delight
+slice-and-dice
+comforts
+
+## --- Construcción y decoración ---
+chipped
+rechiseled
+excessive-building
+runiclib            # dependencia no declarada en Modrinth
+framedblocks
+fusion-connected-textures
+copycats
+create-deco
+macaws-furniture
+macaws-doors
+macaws-windows
+macaws-fences-and-walls
+macaws-roofs
+macaws-bridges
+macaws-trapdoors
+macaws-lights-and-lamps
+macaws-paths-and-pavings
+macaws-stairs
+handcrafted
+another-furniture
+create-design-n-decor
+immersive-furniture
+supplementaries
+amendments
+# every-compat  (quitado en v0.3.0: creaba ~14.500 bloques copia en maderas de otros mods y sumaba ~40 s a la carga)
+building-wands
+effortless-building
+immersive-paintings
+
+## --- Misiones y guías ---
+architectury-api
+cf:404465   # FTB Library
+cf:404468   # FTB Teams
+cf:289412   # FTB Quests
+cf:314906   # FTB Chunks
+cf:386134   # FTB Ultimine
+patchouli
+emi
+jei
+jade
+
+## --- Co-op y calidad de vida ---
+simple-voice-chat
+corpse
+appleskin
+mouse-tweaks
+inventory-profiles-next
+controlling
+clumps
+searchables
+default-options
+chunky @server     # solo servidor: en cliente choca con Distant Horizons al crear mundo
+
+## --- Visuales y sonido ---
+fancymenu           # menu principal personalizado
+drippy-loading-screen # pantalla de carga personalizada
+entity-model-features
+entitytexturefeatures
+sound-physics-remastered
+ambientsounds
+fallingleavesforge
+particle-rain
+euphoria-patches
+
+## --- Resource packs y shaders ---
+fresh-animations
+complementary-reimagined
+complementary-unbound
+bsl-shaders
+
+## --- v0.2.0: carga, FPS y calidad de vida ---
+ksyxis              # carga de mundo mas rapida (no precarga chunks de spawn)
+badoptimizations    # FPS: optimizaciones de renderizado
+dynamic-fps         # baja FPS si el juego esta minimizado (ideal en laptops)
+modelfix            # corrige huecos en modelos
+fast-ip-ping        # lista de servidores mas rapida
+packet-fixer        # evita desconexiones por paquetes grandes con muchos mods
+fastworkbench       # mesas de crafteo mas rapidas
+fastfurnace         # hornos mas rapidos
+spark               # perfilador para diagnosticar lag
+crash-assistant     # pantalla amigable si el juego se cierra
+just-zoom           # zoom (tecla C)
+betterf3            # F3 legible
+# luces dinamicas: descartadas (LambDynamicLights/Dynamic Lights requieren Fabric API; Sodium Dynamic Lights choca con Reese's). Con shaders, Complementary ilumina la antorcha en la mano.
+shoulder-surfing-reloaded # camara en tercera persona sobre el hombro
+polymorph           # elegir receta cuando dos mods chocan
+attributefix        # corrige limites de atributos
+better-advancements # logros mas legibles
+enchantment-descriptions # descripcion de cada encantamiento
+easy-anvils         # yunques mas comodos
+easy-magic          # mesa de encantamiento mas comoda
+pick-up-notifier    # muestra lo que recoges
+leaves-be-gone      # las hojas caen rapido al talar
+carry-on            # cargar cofres y animales
+toast-control       # menos notificaciones molestas
+overflowing-bars    # vida/armadura extra legible
+trade-cycling       # cambiar ofertas de aldeanos
+netherportalfix     # portales del Nether bien enlazados en multijugador
+better-ping-display # ping en numeros
+
+## --- v0.3.0: RPG medieval (clases + arbol de habilidades) ---
+skills              # Pufferfish's Skills: arboles de habilidades (tecla K... ver controles)
+skill-tree          # arboles de las clases RPG Series (200+ nodos)
+wizards             # clase mago (RPG Series)
+paladins-and-priests # clases paladin y sacerdote
+archers             # clase arquero
+rogues-and-warriors # clases picaro y guerrero
+jewelry             # joyas y gemas (anillos/collares en Curios)
+epic-knights-shields-armor-and-weapons # armaduras, escudos y armas medievales
+simply-swords       # armas unicas (compatibles con Better Combat)
+fantasy_armor       # armaduras de fantasia en 3D
+iceandfire-ce       # dragones, grifos, cocatrices... (beta 1.21.1)
+
+## --- v0.3.0: aldeas, NPCs y botin ---
+villager-recruits   # contratar y dirigir soldados aldeanos
+guard-villagers     # guardias que defienden las aldeas
+villager-names-serilum # los aldeanos tienen nombre
+bountiful           # tablones de recompensas (misiones) en las aldeas
+kambrik             # dependencia de Bountiful (no declarada)
+lootr               # cada jugador abre su propio botin en cofres de estructuras (co-op)
+travelers-titles    # titulo al entrar en un bioma/dimension nueva
+
+## --- v0.3.0: estructuras ---
+when-dungeons-arise # mazmorras y fortalezas enormes
+repurposed-structures-forge # variantes de estructuras por bioma
+medieval-buildings
+medieval-buildings-end-edition
+medieval-buildings-nether-edition
+structory
+structory-towers
+sparsestructures    # separa las estructuras para que no se amontonen
+
+## --- v0.3.0: dimensiones ---
+the-undergarden     # mundo subterraneo
+eternal-starlight   # dimension de las estrellas, con jefes
+deep-aether         # amplia el Aether
+
+## --- v0.3.0: ciudades, decoracion y Navidad ---
+yuushya-townscape   # 2600+ bloques para construir pueblos y ciudades
+fairy-lights-fabric # luces colgantes (port NeoForge)
+medieval-paintings  # cuadros medievales
+snowy-spirit        # Navidad: jengibre, trineos, regalos, guirnaldas
+festive-delight     # comidas festivas (Farmer's Delight)
+giant-christmas-tree # arboles de Navidad gigantes en biomas nevados
+create-wrapped      # taller de regalos con Createbundle-api          # dependencia de Archers (no declarada en Modrinth)
+blur-plus           # desenfoque suave detras de inventarios y menus (Blur+)
+
+## --- v0.3.1: animaciones, ambiente y texture packs (mas vida) ---
+auroras             # auroras boreales en el cielo nocturno (biomas frios)
+enhanced-celestials # lunas de sangre, cosecha y azul (eventos nocturnos)
+ambient-environment # variacion sutil de color en pasto, agua y hojas
+subtle-effects      # particulas: luciernagas, humo de chimeneas, vapor, chispas...
+particle-effects    # particulas propias para cada efecto de pocion
+itemphysic-lite     # los objetos tirados quedan acostados en el suelo
+not-enough-animations # animaciones en tercera persona (comer, mapas, escalar)
+3dskinlayers        # capas de la skin en 3D
+wavey-capes         # capas que ondean
+smooth-swapping     # los objetos se deslizan al moverlos en inventarios
+visual-workbench    # los objetos se ven sobre la mesa de crafteo
+# resource packs (se activan en defaultoptions/options.txt)
+fresh-animations-extensions
+better-leaves
+fancy-crops
+better-lanterns
+low-on-fire         # fijado a la version 1.21.1
+visual-armor-trims
+enhanced-boss-bars
+# enhanced-celestials fijado a 6.0.2.5: la 6.0.2.6 muestra un aviso en ingles (EC2) cada vez que entras a un mundo
+
+## --- v0.3.2: almacenamiento, campamento, mundo y mas animaciones ---
+ae2                 # Applied Energistics 2: almacen digital con guia ilustrada (tecla G sobre un objeto)
+storagedrawers      # cajones de almacenamiento
+toms-storage        # red simple de cofres con terminal
+travelersbackpack   # mochilas de viaje con tanques y saco de dormir
+river-redux         # rios de arena, grava y tropicales
+yungs-better-caves  # cuevas con lagos y rios subterraneos
+regions-unexplored  # biomas muy fotogenicos (arces, secuoyas, praderas...)
+enhanced-celestials-2-core              # lunas (reemplaza a Enhanced Celestials 1)
+enhanced-celestials-2-default-lunar-events
+enhanced-celestials-2-shader-support    # lunas compatibles con shaders (Iris)
+# resource packs
+fa-player-extension # anima al jugador al estilo Fresh Animations
+better-cats-x-fresh-animations
+fast-better-grass
+fbg-ru-compat
+yuushya-16x         # pack realista de Yuushya: incluido pero DESACTIVADO (cambia el look de todo el juego)
+# descartados: Voxy (solo Fabric y versiones nuevas), Actions & Stuff (requiere mods de Fabric), Continuity (requiere Sinytra Connector)
+
+## --- v0.3.3: shader configurado y mas resource packs (look medieval sin perder lo vanilla) ---
+# Shader por defecto: Complementary Reimagined + Euphoria Patches (carpeta que crea el mod Euphoria Patcher),
+# perfil Alto + opciones esteticas en pack\shaderpacks\<pack>.txt; activado por defecto (F6 lo apaga).
+jicklus             # retextura rustica/medieval que mantiene el estilo clasico (base, abajo de todo)
+fresh-compats       # Fresh Animations para mobs de otros mods
+vvi                 # Vocal Villagers: 43 sonidos nuevos de aldeanos
+fresh-waystones-texture
+fresh-flower-pots   # macetas con modelo segun la planta
+simple-grass-flowers
+fast-better-grass-for-simple-grass-flowers
+# perros: no hay pack bueno para 1.21.1 compatible con Fresh Animations (Refined Dogs reemplaza el modelo)
+
+## --- v0.3.4: Navidad e invierno (+ consejos de carga propios) ---
+macaws-holidays     # 250+ decoraciones navidenas (arboles, luces, guirnaldas, coronas...)
+winterly            # gorros de Santa y bufandas, regalos, carambanos, decoraciones de invierno
+snow-real-magic     # la nieve se acumula en escaleras, vallas, losas y pasto (requiere Kiwi)
+snow-under-trees    # nieve bajo los arboles en biomas frios
+wintery-atmosphere  # copos que caen de techos/acantilados y escarcha en el vidrio
+christmas-mobs      # resource pack: gorros de Santa en los mobs (incluido DESACTIVADO, activar en diciembre)
+# Consejos de las pantallas de carga: son los "Pro Tips" de The Aether; translations\manual\aether.json reemplaza sus 62 textos por consejos del pack.
+# Cubeta de ajolote animada: resuelta en v0.4.1 con el resource pack Bucket Buddies (no necesita mods).
+# Refined Buckets quedo fuera: sus animaciones necesitan Modefite via Sinytra Connector (no hay version NeoForge).
+
+## --- v0.4.0: cocina, pesca, economia, monturas y QoL ---
+# Cocina y bebida (encaja con Farmer's Delight y Serene Seasons)
+farmers-respite-unofficial-port  # tes, cafes e infusiones con buffs suaves
+brewin-and-chewin                # cervezas, quesos y fermentados (multibloque)
+cooking-for-blockheads           # cocina multibloque conectada a cofres, con libro de recetas
+# Pesca
+aquaculture                    # Aquaculture 2: peces por bioma, cañas y trofeos
+# Economia: descartada por ahora. numismatic-overhaul-neoforged 4.0.0 rompe el mundo al crearse
+# (mixin VillagerPackCodecsMixin no encuentra parseTrade en Villager API 1.26.9.6). Reintentar cuando
+# el port se actualice o probar fijando una Villager API de mayo 2026.
+# Monturas y transporte (mundos grandes de Tectonic/Terralith)
+# small-ships 2.0.2: QUITADO, su config crashea al detener el servidor interno (getFullPath() sobre config null
+# en el evento Unloading). Probar 2.0.1 si se quiere recuperar; por ahora queda solo Immersive Aircraft.
+immersive-aircraft             # avionetas y planeadores rusticos (tecla de encendido en el vehiculo)
+# Armadura cosmetica: verse bien sin perder las stats de Epic Knights/Fantasy Armor
+cosmetic-armor-reworked-forked
+# QoL de inventario
+easy-shulker-boxes             # ver y sacar cosas de las shulkers sin colocarlas (trae iteminteractions dentro del jar)
+# Co-op
+ping-wheel                     # marcar posiciones/objetos en el mundo (addon de Simple Voice Chat)
+better-compatibility-checker   # avisa si cliente y servidor no tienen los mismos mods
+# Optimizacion
+noisium                        # generacion de mundo mas rapida
+alternate-current              # redstone mas barato de calcular (menos lag en granjas)
+# Copias de seguridad del servidor
+simple-backups                 # backups automaticos (config en config\simplebackups)
+
+## --- v0.4.1: rendimiento, tooltips con color y baldes animados ---
+# El aviso "G1 Garbage collector detected" de Distant Horizons era real: ATLauncher lanzaba el juego con
+# -XX:+UseG1GC. Ahora usa Shenandoah (-XX:+UseShenandoahGC, Java 21): sin pausas largas y sin alargar la carga.
+# ZGC generacional tambien quitaba los tirones pero ponia el arranque en ~180 s (medido).
+moreculling                    # FPS: oculta caras de bloques, marcos y cuadros no visibles
+iceberg                        # libreria de Legendary Tooltips (bordes animados)
+prism-lib                      # libreria de color de Legendary Tooltips
+legendary-tooltips             # tooltips con borde/color por rareza, modelos 3D y nombre centrado
+bucket-buddies                 # resource pack: baldes 3D con ajolote/peces animados (reemplaza a Refined Buckets)

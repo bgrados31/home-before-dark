@@ -1,0 +1,9 @@
+{
+"ftbultimine.client_settings.general.shape_feedback_hotbar_message": "Mensaje al cambiar de forma",
+"ftbultimine.client_settings.overlay.overlay_scale": "Tamaño de la superposición",
+"ftbultimine.modifier.cooldown": "Espera de FTB Ultimine (ticks)",
+"ftbultimine.modifier.exhaustion": "Consumo de comida de FTB Ultimine",
+"ftbultimine.modifier.experience": "Coste de experiencia de FTB Ultimine",
+"ftbultimine.modifier.max_blocks": "Máximo de bloques de FTB Ultimine",
+"ftbultimine.server_settings.costs_limits.require_valid_tool_for_block": "Requerir herramienta adecuada"
+}

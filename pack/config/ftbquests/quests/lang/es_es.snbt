@@ -1,0 +1,166 @@
+{
+	file.0000000000000001.title: "Home Before Dark"
+	chapter_group.41B1A2E73B8E222B.title: "&6Historia principal"
+	chapter_group.35475A5D9A1092CC.title: "&bOficios y guías"
+	chapter_group.13B95B6296F484A1.title: "&cEventos de temporada"
+	chapter.2BB725A299A04B21.title: "&6Hogar antes del anochecer"
+	chapter.2BB725A299A04B21.chapter_subtitle: ["Los primeros días: refugio, comida y un equipo"]
+	chapter.16A229E2934A8BF6.title: "&6El pueblo"
+	chapter.16A229E2934A8BF6.chapter_subtitle: ["Vecinos, encargos y un ejército propio"]
+	chapter.0833DFC7EF70230E.title: "&6Acero y escudo"
+	chapter.0833DFC7EF70230E.chapter_subtitle: ["Forja, armaduras de caballero y combate de verdad"]
+	chapter.664B58DAE8CA74F2.title: "&6Elige tu camino"
+	chapter.664B58DAE8CA74F2.chapter_subtitle: ["Clases, hechizos y árbol de habilidades"]
+	chapter.634A761B93ADE37E.title: "&bAlmacén y máquinas"
+	chapter.634A761B93ADE37E.chapter_subtitle: ["Del cajón de madera a la red digital"]
+	chapter.0B2954517DB5E7C4.title: "&bCampamento y exploración"
+	chapter.0B2954517DB5E7C4.chapter_subtitle: ["Viajar lejos y volver a casa"]
+	task.1020D6D6C51F6B5F.title: "Entendido"
+	quest.5B108840977D51D4.title: "&6¡Bienvenidos a Home Before Dark!"
+	quest.5B108840977D51D4.quest_desc: ["Un modpack para jugar juntos: explorar de día, volver a casa antes de que oscurezca y, poco a poco, convertir ese refugio en un pueblo.", "", "Las misiones son una &eguía&r, no un candado: juega a tu ritmo. Cada capítulo presenta mods del pack y da recompensas útiles.", "", "&eTeclas útiles:&r &6M&r mapa · &6Z&r zoom · &6K&r habilidades · &6R&r rodar · &6B&r mochila · &6F6&r shaders · &6F8&r chat de voz", "&eEn el inventario:&r &6R&r receta y &6U&r usos de un objeto (EMI) · &6G&r accesorios"]
+	task.35E6C918D0F9917C.title: "Ya tenemos equipo"
+	quest.1712708C53B0FDA8.title: "Un equipo para todos"
+	quest.1712708C53B0FDA8.quest_desc: ["En el servidor, crea un &6equipo&r con tus amigos para compartir misiones y terreno.", "", "Usa el botón &aMi equipo&r (arriba a la izquierda del inventario) o el comando &a/ftbteams party create <nombre>&r, y luego invita a los demás."]
+	task.36FCEA493C47FDC5.title: "Reclamé mi terreno"
+	quest.27F7BC3D8BB2B48A.title: "Reclamar el terreno"
+	quest.27F7BC3D8BB2B48A.quest_desc: ["Abre el mapa con &6M&r y entra en el &aGestor de protecciones&r.", "", "Arrastra con clic izquierdo para reclamar chunks: nadie fuera de tu equipo podrá romper ni abrir nada ahí. Así la base queda a salvo."]
+	quest.28231438717C6278.title: "Una mesa de trabajo"
+	quest.28231438717C6278.quest_desc: ["Tala unos árboles y fabrica una mesa de trabajo.", "", "¿No sabes una receta? Pasa el cursor sobre el objeto en la lista de la derecha del inventario (&6EMI&r) y pulsa &6R&r."]
+	quest.651D41C58E9882F4.title: "Una mochila"
+	quest.651D41C58E9882F4.quest_desc: ["Las mochilas de &6Sophisticated Backpacks&r guardan mucho más que el inventario y se pueden mejorar: recoger objetos solos, darte de comer, ordenar...", "", "Póntela en la espalda o colócala en el suelo como un cofre."]
+	quest.57CE85879B056E6C.title: "Herramientas de piedra"
+	quest.57CE85879B056E6C.quest_desc: ["Una buena pica de piedra abre la puerta a todo lo demás: carbón, hierro y cuevas.", "", "&6FTB Ultimine:&r mantén la tecla a la izquierda del &61&r mientras picas o talas y romperás la veta o el árbol entero de una vez."]
+	quest.61303C03C2812176.title: "Fuego en el hogar"
+	quest.61303C03C2812176.quest_desc: ["Un horno para cocinar la comida y fundir los minerales.", "", "Combustible abajo, lo que quieras cocinar arriba. Si no encuentras carbón, quema troncos en el horno: el carbón vegetal sirve igual."]
+	task.5739EB31951944E9.title: "Tengo un refugio"
+	quest.2D3B1A4B82F900C4.title: "Un techo antes de la noche"
+	quest.2D3B1A4B82F900C4.quest_desc: ["Construye un refugio sencillo con puerta.", "", "No hace falta que sea bonito: hace falta que esté listo &eantes del anochecer&r. Ya habrá tiempo de convertirlo en una casa de verdad."]
+	quest.6FA1C5AE8568EB2C.title: "Que no falte luz"
+	quest.6FA1C5AE8568EB2C.quest_desc: ["Los monstruos aparecen en la oscuridad. Ilumina el refugio y sus alrededores.", "", "De noche, con los shaders activados (&6F6&r), la luz de las antorchas y los faroles se ve preciosa."]
+	quest.613B793B9D7B1D6A.title: "&6Hogar antes del anochecer"
+	quest.613B793B9D7B1D6A.quest_desc: ["Duerme en una cama para pasar la noche.", "", "Dormir también fija el punto donde reapareces. Si mueres lejos, tus cosas te esperan en una tumba (&6Corpse&r)."]
+	quest.2D9AEDCF91610274.title: "Primera siembra"
+	quest.2D9AEDCF91610274.quest_desc: ["Planta semillas cerca de agua.", "", "Con &6Serene Seasons&r hay estaciones de verdad: cada cultivo crece en ciertas estaciones. La descripción de cada semilla dice cuáles."]
+	quest.735B6296025DEE49.title: "La olla del pueblo"
+	quest.735B6296025DEE49.quest_desc: ["La olla de &6Farmer's Delight&r prepara sopas, guisos y platos que dan buenos efectos.", "", "Ponla sobre una fogata o un horno encendido y mira sus recetas con &6U&r en EMI."]
+	quest.5CB4869801C64694.title: "La edad del hierro"
+	quest.5CB4869801C64694.quest_desc: ["Funde tu primer lingote de hierro.", "", "Las cuevas son más profundas de lo que parecen: hay lagos y ríos subterráneos, minas abandonadas y mazmorras. Lleven antorchas, comida y una cama de repuesto."]
+	task.15E7B4F789323652.title: "Activé una waystone"
+	quest.79F11D02AE3E0652.title: "Piedras de viaje"
+	quest.79F11D02AE3E0652.quest_desc: ["Las &6Waystones&r aparecen en aldeas y caminos. Haz clic derecho en una para activarla.", "", "Luego puedes viajar entre todas las que tu grupo haya activado (cuesta un poco de experiencia)."]
+	quest.362DDB3253A0B224.title: "&6Listos para el camino"
+	quest.362DDB3253A0B224.quest_desc: ["Ponte tu primera pieza de armadura.", "", "Con refugio, comida y hierro ya pueden salir a explorar. El siguiente capítulo, &6El pueblo&r, los espera."]
+	quest.11ADEE57DC612E69.title: "&6Encuentra una aldea"
+	quest.11ADEE57DC612E69.quest_desc: ["Explora hasta dar con una aldea. En este pack cada bioma tiene la suya, con más casas, granjas y defensas.", "", "Si no aparece ninguna, fabrica una &6Explorer's Compass&r: te señala la estructura que elijas."]
+	quest.5D4D752087665199.title: "Primer trato"
+	quest.5D4D752087665199.quest_desc: ["Comercia con un aldeano.", "", "Si las ofertas de un aldeano que aún no ha comerciado no te sirven, puedes cambiarlas desde su ventana de comercio (&6Trade Cycling&r)."]
+	task.0B4F53715B61BA3D.title: "Cobré un encargo"
+	quest.1C32CE5FDB3B255E.title: "El tablón de recompensas"
+	quest.1C32CE5FDB3B255E.quest_desc: ["Muchas aldeas tienen un &6tablón de recompensas&r. Ahí aparecen encargos: traer objetos o cazar criaturas a cambio de premios.", "", "Toma un encargo, consigue lo que pide y vuelve al tablón para cobrarlo."]
+	task.1CB76FB6DA232846.title: "Conocí a los guardias"
+	quest.1CD448006E35D893.title: "Los guardias"
+	quest.1CD448006E35D893.quest_desc: ["Las aldeas tienen &6guardias&r que las defienden de los monstruos.", "", "Puedes darles mejores armas y armaduras para que aguanten las noches más duras."]
+	task.1F6A709D11284441.title: "Contraté un recluta"
+	quest.331EF3B08DA5B13E.title: "Tu propio ejército"
+	quest.331EF3B08DA5B13E.quest_desc: ["Con &6Villager Recruits&r puedes contratar soldados pagando con esmeraldas.", "", "Desde su menú les das órdenes: seguirte, quedarse de guardia o atacar. Con la tecla &6J&r abres el panel de órdenes para todo tu grupo de soldados.", "", "Son perfectos para defender el pueblo del grupo mientras ustedes exploran."]
+	task.5253554582E413D5.title: "Entendido"
+	quest.6E1E2B26335C2EDA.title: "Botín para todos"
+	quest.6E1E2B26335C2EDA.quest_desc: ["Gracias a &6Lootr&r, cada jugador encuentra su propio botín en los cofres de las estructuras.", "", "Nadie se queda sin nada por llegar segundo: cada uno abre su parte."]
+	quest.0DB202170EF2478C.title: "&6Héroe de la aldea"
+	quest.0DB202170EF2478C.quest_desc: ["Defiende una aldea de una invasión de saqueadores.", "", "Prepárense bien: armadura, escudo, comida, reclutas... y amigos."]
+	quest.312DAFC749695DFB.title: "&6La forja del pueblo"
+	quest.312DAFC749695DFB.quest_desc: ["Toda aldea que se precie tiene una forja. Fabrica un yunque: con él reparas, combinas y nombras tu equipo.", "", "Con &6Easy Anvils&r los objetos se quedan sobre el yunque y reparar sale más barato que en Minecraft normal."]
+	quest.410E164AB625EF02.title: "Combate de verdad"
+	quest.410E164AB625EF02.quest_desc: ["Con &6Better Combat&r cada arma se maneja distinto: las espadas cortan en arco, las lanzas pinchan lejos, las hachas dobles golpean a varios.", "", "Mantén el clic para encadenar combos. Las armas a dos manos pegan más fuerte pero no permiten escudo.", "", "Pulsa &6R&r para rodar y esquivar (&6Combat Roll&r)."]
+	quest.0292B95B7236166A.title: "Un escudo con escudo de armas"
+	quest.0292B95B7236166A.quest_desc: ["&6Epic Knights&r añade escudos de muchas formas: de lágrima, redondos, de torre...", "", "Combínalos con un estandarte en la mesa de trabajo para pintarles la heráldica de tu familia o de tu pueblo."]
+	quest.7ED75F0964C11BDD.title: "Un arma con estilo"
+	quest.7ED75F0964C11BDD.quest_desc: ["&6Simply Swords&r trae katanas, estoques, alfanjes, sais, lanzas y guadañas, cada una con su forma de pelear.", "", "Prueben varias: el grupo funciona mejor si cada uno tiene su estilo."]
+	quest.31EFBAE7CF800AD8.title: "&6Armadura de caballero"
+	quest.31EFBAE7CF800AD8.quest_desc: ["La armadura de caballero de &6Epic Knights&r protege más que la de hierro normal y se ve imponente.", "", "Hay decenas de piezas: yelmos, gambesones, cotas de malla, armaduras de cruzado... Revisen EMI para verlas todas."]
+	quest.54EEBC2AAFDF969D.title: "Un yelmo cerrado"
+	quest.54EEBC2AAFDF969D.quest_desc: ["El armet cubre toda la cabeza. Perfecto para el caballero del grupo."]
+	quest.53878A8D89BE90F5.title: "Armadura de cruzado"
+	quest.53878A8D89BE90F5.quest_desc: ["Otra armadura pesada de &6Epic Knights&r, con su propio estilo. Ideal para el escuadrón del pueblo."]
+	quest.7AFA98463A765B65.title: "Primer encantamiento"
+	quest.7AFA98463A765B65.quest_desc: ["Encanta un objeto. Con &6Easy Magic&r la mesa guarda el lapislázuli y los objetos, y puedes volver a tirar las opciones.", "", "Pasa el cursor por un encantamiento para leer qué hace (&6Enchantment Descriptions&r)."]
+	quest.4AA62CE91009AD54.title: "¡Diamantes!"
+	quest.4AA62CE91009AD54.quest_desc: ["Los diamantes están en lo más hondo. Con &6Tectonic&r las montañas son enormes: excavar dentro de una suele dar buenas cuevas."]
+	quest.3F8C4D58FFC6FF6C.title: "Forja con estilo"
+	quest.3F8C4D58FFC6FF6C.quest_desc: ["Aplica un adorno a una armadura en la mesa de herrería. Con el pack &6Visual Armor Trims&r también se ve en el inventario."]
+	quest.1D7B39CFF98937F1.title: "&6Listos para la batalla"
+	quest.1D7B39CFF98937F1.quest_desc: ["Equípate con armadura de diamante completa.", "", "Ya pueden plantarle cara a las mazmorras grandes. El siguiente paso: elegir un camino (&6Elige tu camino&r)."]
+	task.5F5E75EA2AF6A713.title: "Entendido"
+	quest.09CA8B5018B42ADC.title: "&6Los caminos del aventurero"
+	quest.09CA8B5018B42ADC.quest_desc: ["En Home Before Dark cada uno puede especializarse: &5mago&r, &epaladín&r o &fsacerdote&r, &8pícaro&r o &cguerrero&r, y &aarquero&r.", "", "Cada clase tiene su mesa de artesano (se encuentran en casas de las aldeas), sus armas, sus armaduras y sus hechizos.", "", "Las misiones de este capítulo son opcionales: completen la de su camino. Un grupo con clases distintas es mucho más fuerte."]
+	task.33268AEE25B912ED.title: "Abrí mi árbol"
+	quest.6E8E09FA82F2F0BA.title: "El árbol de habilidades"
+	quest.6E8E09FA82F2F0BA.quest_desc: ["Pulsa &6K&r para abrir tu árbol de habilidades (&6Pufferfish's Skills&r).", "", "Al pelear y avanzar ganas puntos que gastas en nodos: más vida, más daño, hechizos más fuertes o defensa. Cada clase tiene ramas propias.", "", "No hay prisa: piensa hacia dónde quieres llevar a tu personaje."]
+	quest.09CEC41997795FDB.title: "La mesa de vinculación"
+	quest.09CEC41997795FDB.quest_desc: ["Con la &6mesa de vinculación&r (Spell Engine) unes hechizos a tus armas de clase y libros.", "", "Pon el arma o el libro, elige el hechizo y paga con experiencia y lapislázuli."]
+	quest.217740B07B0A6783.title: "&5Camino del mago"
+	quest.217740B07B0A6783.quest_desc: ["Varitas y bastones de magia &5arcana&r, de &cfuego&r o de &bescarcha&r. Daño a distancia enorme, pero poca armadura: quédate detrás del guerrero."]
+	quest.3A1221F0BA5E3713.title: "&eCamino del paladín"
+	quest.3A1221F0BA5E3713.quest_desc: ["Mazas, mandobles y escudos de cometa. Aguanta golpes, protege al grupo y cura un poco con magia sagrada."]
+	quest.089E7C5B59828793.title: "&fCamino del sacerdote"
+	quest.089E7C5B59828793.quest_desc: ["El sanador del grupo: cura, pone escudos y bendice a los aliados. Todo grupo lo agradece en las peleas con jefes."]
+	quest.2EBB5A620006AA42.title: "&8Camino del pícaro"
+	quest.2EBB5A620006AA42.quest_desc: ["Dagas y hoces rápidas, sigilo y golpes por la espalda. Entra, golpea y desaparece."]
+	quest.01154AA370D77D25.title: "&cCamino del guerrero"
+	quest.01154AA370D77D25.quest_desc: ["Hachas dobles y gritos de guerra. Golpea a varios enemigos a la vez y aguanta en primera línea."]
+	quest.1A57E8B6259E306D.title: "&aCamino del arquero"
+	quest.1A57E8B6259E306D.quest_desc: ["Arcos largos, ballestas y lanzas. Disparos cargados, flechas especiales y mucha movilidad."]
+	quest.78BEEB3C423CD53C.title: "El joyero"
+	quest.78BEEB3C423CD53C.quest_desc: ["Bajo tierra hay &6vetas de gemas&r: rubí, topacio, citrino, jade y zafiro.", "", "Con el kit de joyero fabricas anillos y collares que dan bonificaciones (vida, daño, poder mágico). Se equipan en las ranuras de accesorios (tecla &6G&r)."]
+	quest.02037516962C053E.title: "Magia de libros"
+	quest.02037516962C053E.quest_desc: ["&6Iron's Spells 'n Spellbooks&r: encuentra pergaminos de hechizos en mazmorras e inscríbelos en un libro de hechizos con la mesa de inscripción.", "", "Equipa el libro y lanza con &6V&r; cambia de hechizo con &6X&r."]
+	quest.10C3018BD83D9720.title: "Magia creativa"
+	quest.10C3018BD83D9720.quest_desc: ["&6Ars Nouveau&r deja diseñar tus propios hechizos combinando glifos: forma, efecto y aumentos.", "", "Empieza con el &6Tomo Andrajoso&r: es una guía completa dentro del juego."]
+	quest.6D471EE99DF29DE3.title: "&bUn almacén ordenado"
+	quest.6D471EE99DF29DE3.quest_desc: ["Los cofres se llenan rápido. Los &6cajones&r (Storage Drawers) guardan muchísimo de un solo objeto y se ven en la pared.", "", "Clic derecho para meter (doble clic mete todo lo igual del inventario); clic izquierdo para sacar."]
+	quest.0B9AEE456F691ED1.title: "Controlador de cajones"
+	quest.0B9AEE456F691ED1.quest_desc: ["Conecta una pared de cajones a un controlador y mete cosas en cualquier cajón desde un solo bloque."]
+	quest.3AA8B12DFF132BD9.title: "Una red sencilla"
+	quest.3AA8B12DFF132BD9.quest_desc: ["&6Tom's Simple Storage&r une todos tus cofres, barriles y cajones: pon un &6conector de inventario&r tocando los contenedores...", "", "...y un &6terminal de almacenamiento&r al lado. Desde ahí ves y buscas todo lo que guardaron."]
+	quest.7C530A53F0901D2B.title: "El terminal del pueblo"
+	quest.7C530A53F0901D2B.quest_desc: ["Fabrica el terminal de almacenamiento. Pónganlo en la casa común: todos encontrarán todo sin abrir cofre por cofre."]
+	quest.6D9EF095C76DF15C.title: "&bIngeniería: Create"
+	quest.6D9EF095C76DF15C.quest_desc: ["&6Create&r son máquinas de engranajes: molinos, prensas, mezcladoras, cintas y hasta trenes.", "", "&eTruco:&r mantén &6W&r con el cursor sobre cualquier objeto de Create y verás una animación (&6Ponder&r) que enseña cómo funciona."]
+	quest.561F2238420580EB.title: "Energía del agua"
+	quest.561F2238420580EB.quest_desc: ["Una rueda de agua junto a un río da fuerza rotacional gratis. Conéctala con ejes y engranajes."]
+	quest.39C55319C9818238.title: "La prensa mecánica"
+	quest.39C55319C9818238.quest_desc: ["Aplasta lingotes en láminas y prepara recetas automáticas. Con una cinta debajo, trabaja sola."]
+	quest.07B5C84EDB3CDCB5.title: "Gafas de ingeniero"
+	quest.07B5C84EDB3CDCB5.quest_desc: ["Con las gafas puestas ves la velocidad y la tensión de cada máquina. Imprescindibles para diagnosticar."]
+	quest.19F17103176D13D1.title: "&bAE2: el almacén digital"
+	quest.19F17103176D13D1.quest_desc: ["&6Applied Energistics 2&r convierte objetos en datos: una red que guarda miles de cosas y las fabrica sola.", "", "Trae su propia &6guía ilustrada&r: pulsa &6G&r con el cursor sobre cualquier objeto de AE2 para abrir su página, con recetas y estructuras en 3D.", "", "Empieza buscando cuarzo certus: crece en geodas y en los meteoritos (la &6brújula de meteoritos&r los señala)."]
+	quest.3FFA7388A4100DCB.title: "El inscriptor"
+	quest.3FFA7388A4100DCB.quest_desc: ["Imprime los circuitos que necesita la red. Las prensas de inscripción se encuentran dentro de los meteoritos."]
+	quest.7B667C9365257CD6.title: "El cerebro de la red"
+	quest.7B667C9365257CD6.quest_desc: ["El controlador ME reparte energía y canales a toda la red. Necesita energía (por ejemplo, de Create: Crafts & Additions)."]
+	quest.5FA34B1D6EC1557A.title: "&bAlmacenamiento digital"
+	quest.5FA34B1D6EC1557A.quest_desc: ["Una unidad ME con una celda de 1k y un terminal: ya tienen un almacén digital.", "", "Desde aquí, la guía de AE2 enseña autocrafteo, exportadores y mucho más."]
+	quest.1BBAFE836E84A26C.title: "&bLa mochila del viajero"
+	quest.1BBAFE836E84A26C.quest_desc: ["La mochila de &6Traveler's Backpack&r lleva dos tanques de líquidos, una mesa de trabajo y un saco de dormir.", "", "Fabricada con materiales distintos (de dragón, de mob, de bioma...) da habilidades especiales. Se lleva en la espalda y se coloca en el suelo."]
+	quest.4F4DE96120E45922.title: "Dormir al raso"
+	quest.4F4DE96120E45922.quest_desc: ["Un saco de dormir para las expediciones. Pasas la noche sin cambiar el punto donde reapareces: tu hogar sigue siendo tu casa.", "", "También hay sacos y hamacas de &6Comforts&r."]
+	quest.380267988BDFADE8.title: "Fogata de campamento"
+	quest.380267988BDFADE8.quest_desc: ["Cocina sobre la fogata sin gastar carbón. Con un fardo de heno debajo, el humo sube muy alto: sirve de señal para que el grupo te encuentre.", "", "Con la olla de Farmer's Delight encima, el campamento tiene cocina."]
+	quest.19B7057C0CFFC251.title: "Una siesta de día"
+	quest.19B7057C0CFFC251.quest_desc: ["La hamaca de &6Comforts&r te deja dormir de día hasta que anochezca. Útil para viajar de noche a propósito."]
+	quest.379CF43FB0E42A4A.title: "Buscar paisajes"
+	quest.379CF43FB0E42A4A.quest_desc: ["La &6Nature's Compass&r te lleva al bioma que elijas: más de cien con Terralith y Regions Unexplored."]
+	quest.2B52C90FD36F5F8E.title: "Buscar estructuras"
+	quest.2B52C90FD36F5F8E.quest_desc: ["La &6Explorer's Compass&r señala aldeas, torres, mazmorras y ruinas. Ideal para planear la próxima expedición."]
+	quest.6B52F475A17CC5DB.title: "Ríos de arena"
+	quest.6B52F475A17CC5DB.quest_desc: ["Con &6River Redux&r los ríos tienen variantes: de arena, de grava y tropicales. Encuentra un río de arena."]
+	quest.66E2902DDA3EA56B.title: "Bosque de arces en otoño"
+	quest.66E2902DDA3EA56B.quest_desc: ["Un bosque de arces de &6Regions Unexplored&r. En otoño (con Serene Seasons) es de los lugares más bonitos del mundo."]
+	quest.16B3101335AC40C4.title: "Bosque de cerezos"
+	quest.16B3101335AC40C4.quest_desc: ["Encuentra un bosque de cerezos. Con shaders (&6F6&r) y en primavera, es la foto perfecta."]
+	task.6E0A920692203575.title: "Saqué la foto"
+	quest.10D760F0BC347226.title: "Una foto para el recuerdo"
+	quest.10D760F0BC347226.quest_desc: ["Busquen un lugar bonito, activen los shaders con &6F6&r, escondan la interfaz con &6F1&r y saquen una foto con &6F2&r.", "", "Las fotos se guardan en la carpeta &6screenshots&r de la instancia. ¡El recuerdo del viaje!"]
+	quest.10C8950C2091F13F.title: "&bLejos de casa"
+	quest.10C8950C2091F13F.quest_desc: ["El gran reto del viajero: completar el logro &6Hora de aventuras&r, que pide pisar todos los biomas de Minecraft normal (la pantalla de logros, tecla &6L&r, muestra cuáles faltan).", "", "Es para muchas semanas de viaje. Activen &6waystones&r por el camino para volver a casa antes del anochecer."]
+}

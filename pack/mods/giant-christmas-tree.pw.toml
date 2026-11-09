@@ -1,0 +1,13 @@
+name = "Giant Christmas Tree"
+filename = "giant_christmas_tree-1.0.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/vks2kfb2/versions/NILSupTc/giant_christmas_tree-1.0.0-neoforge-1.21.1.jar"
+hash-format = "sha512"
+hash = "731f8a51e8116e517f19d90476409686830ac47e73211928b8d06b8820a8ea7af56c061f8876e6249ecba1ecfa36ce6f720d9cbad4e0edcf21eb1b2b2e56d8a7"
+
+[update]
+[update.modrinth]
+mod-id = "vks2kfb2"
+version = "NILSupTc"

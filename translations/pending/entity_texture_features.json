@@ -1,0 +1,1 @@
+{"config.entity_texture_features.property_explanation.resourcepack":"Resourcepacks\nTests each of the loaded resourcepack names\n§aresourcepack.\u003cn\u003e=\u003cresourcepack_list|regex|pattern\u003e","config.entity_texture_features.property_explanation.usingShaders":"Using Shaders\nIf Iris shaders are in use or not\n§ausingShaders.\u003cn\u003e=\u003ctrue/false\u003e"}

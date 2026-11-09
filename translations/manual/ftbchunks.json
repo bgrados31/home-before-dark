@@ -1,0 +1,14 @@
+{
+"ftbchunks.admin_bypass_reminder": "Recordatorio: el modo administrador de FTB Chunks está activado.\nPuedes cambiarlo con '/ftbchunks admin bypass_protection'.",
+"ftbchunks.claim_mode.circle": "Reclamar en círculo",
+"ftbchunks.claim_mode.freehand": "Reclamar a mano alzada",
+"ftbchunks.claim_mode.rectangle": "Reclamar en rectángulo",
+"ftbchunks.config.client": "Ajustes del cliente",
+"ftbchunks.config.client.appearance.claim_mode": "Modo de reclamar chunks",
+"ftbchunks.config.server": "Ajustes del servidor",
+"ftbchunks.config.server.fire_spread_protection": "Protección contra la propagación del fuego",
+"ftbchunks.config.server.flowing_fluid_protection": "Protección contra fluidos",
+"ftbchunks.config.server.nether_portal_creation": "Creación de portales al Nether",
+"ftbchunks.nether_portal.failure": "No puedes teletransportarte aquí: se impidió crear el portal remoto",
+"ftbchunks.nether_portal.no_portal": "Teletransporte permitido, pero sin crear portal"
+}

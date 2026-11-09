@@ -1,0 +1,34 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = %fancymenu:universal_layout%
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1762700000000
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+  universal_layout_blacklist = hogar;title_screen;drippy_loading_overlay;
+  widget_identifier_revision = 2
+  [loading_requirement_container_meta:req-fuera-del-mundo] = [groups:][instances:sin-mundo;]
+  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:sin-mundo] =
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = true
+}
+
+menu_background {
+  instance_identifier = fondo
+  background_type = image
+  image_path = [source:local]/config/fancymenu/assets/escenas/fondo_menus.png
+  slide = false
+  repeat_texture = false
+  parallax = false
+  parallax_intensity_x = 0.006
+  parallax_intensity_y = 0.006
+  invert_parallax = false
+  restart_animated_on_menu_load = true
+}

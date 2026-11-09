@@ -1,0 +1,13 @@
+name = "Medieval Paintings"
+filename = "medieval_paintings-1.21.1-7.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/mfHP09ru/versions/78AfZPK8/medieval_paintings-1.21.1-7.0.jar"
+hash-format = "sha512"
+hash = "8715d48e3b9b5dc038f1618a4c706020089d38c36c4a09291481f5708f19e59fa72c45779a7abb3bcd686915762d3ebef9e34d117f11432803f55cdbd3be973b"
+
+[update]
+[update.modrinth]
+mod-id = "mfHP09ru"
+version = "78AfZPK8"

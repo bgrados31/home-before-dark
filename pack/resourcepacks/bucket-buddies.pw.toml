@@ -1,0 +1,13 @@
+name = "Bucket Buddies"
+filename = "bucket-buddies-0.1.zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/iczqSgHM/versions/f6vRLJi9/bucket-buddies-0.1.zip"
+hash-format = "sha512"
+hash = "fa64879e03151d3d18cca1476d1a384a519134d83f4617bc68660b5f83a2b85a506a8bc3b14d0249456517782f43a0a23677ced83b682574481275f287654554"
+
+[update]
+[update.modrinth]
+mod-id = "iczqSgHM"
+version = "f6vRLJi9"

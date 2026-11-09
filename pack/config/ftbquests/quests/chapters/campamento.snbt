@@ -1,0 +1,121 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "campamento"
+	group: "35475A5D9A1092CC"
+	icon: { id: "travelersbackpack:standard" }
+	id: "0B2954517DB5E7C4"
+	order_index: 11
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			icon: { id: "travelersbackpack:standard" }
+			id: "1BBAFE836E84A26C"
+			rewards: [{ id: "7D3BC71574AC0BF1", type: "xp", xp: 40 }]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{ id: "13E8E3BBC1B8ABF0", item: { count: 1, id: "travelersbackpack:standard" }, type: "item" }]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1BBAFE836E84A26C"]
+			icon: { id: "travelersbackpack:white_sleeping_bag" }
+			id: "4F4DE96120E45922"
+			rewards: [{ id: "7DD2B5A7292598D4", type: "xp", xp: 20 }]
+			tasks: [{ id: "37BF77F27C74297E", item: { count: 1, id: "travelersbackpack:white_sleeping_bag" }, type: "item" }]
+			x: 2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1BBAFE836E84A26C"]
+			icon: { id: "minecraft:campfire" }
+			id: "380267988BDFADE8"
+			rewards: [{ id: "3AF1C5D3F32C6899", type: "xp", xp: 20 }]
+			tasks: [{ id: "180E01C755EA7AA8", item: { count: 1, id: "minecraft:campfire" }, type: "item" }]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4F4DE96120E45922"]
+			icon: { id: "comforts:hammock_white" }
+			id: "19B7057C0CFFC251"
+			optional: true
+			rewards: [{ id: "5166378F4FD3F3FD", type: "xp", xp: 20 }]
+			tasks: [{ id: "49D7AC05D5796A92", item: { count: 1, id: "comforts:hammock_white" }, type: "item" }]
+			x: 5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4F4DE96120E45922"]
+			icon: { id: "naturescompass:naturescompass" }
+			id: "379CF43FB0E42A4A"
+			rewards: [{ id: "3EBCC47AF82FB32B", type: "xp", xp: 30 }]
+			tasks: [{ id: "0832199A61757E42", item: { count: 1, id: "naturescompass:naturescompass" }, type: "item" }]
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["380267988BDFADE8"]
+			icon: { id: "explorerscompass:explorerscompass" }
+			id: "2B52C90FD36F5F8E"
+			rewards: [{ id: "42918C0C07ED598B", type: "xp", xp: 30 }]
+			tasks: [{ id: "590D712C5B82366B", item: { count: 1, id: "explorerscompass:explorerscompass" }, type: "item" }]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["379CF43FB0E42A4A"]
+			icon: { id: "minecraft:sand" }
+			id: "6B52F475A17CC5DB"
+			optional: true
+			rewards: [{ id: "36AE3F0250B0E3BB", type: "xp", xp: 30 }]
+			tasks: [{ biome: "riverredux:sandy_river", id: "38E5A6E56D7248A6", type: "biome" }]
+			x: 7.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["379CF43FB0E42A4A"]
+			icon: { id: "minecraft:orange_dye" }
+			id: "66E2902DDA3EA56B"
+			optional: true
+			rewards: [{ id: "2EC85ADC24AB0678", type: "xp", xp: 30 }]
+			tasks: [{ biome: "regions_unexplored:autumnal_maple_forest", id: "52EAE391967EDFA6", type: "biome" }]
+			x: 7.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["379CF43FB0E42A4A"]
+			icon: { id: "minecraft:cherry_sapling" }
+			id: "16B3101335AC40C4"
+			optional: true
+			rewards: [{ id: "0D445EF7AD1C711C", type: "xp", xp: 30 }]
+			tasks: [{ biome: "minecraft:cherry_grove", id: "5D8C67B23EC5FC8F", type: "biome" }]
+			x: 7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["66E2902DDA3EA56B"]
+			icon: { id: "minecraft:painting" }
+			id: "10D760F0BC347226"
+			rewards: [{ id: "322D675482F9865E", type: "xp", xp: 30 }]
+			shape: "diamond"
+			size: 1.3d
+			tasks: [{ id: "6E0A920692203575", type: "checkmark" }]
+			x: 10.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["2B52C90FD36F5F8E"]
+			icon: { id: "minecraft:filled_map" }
+			id: "10C8950C2091F13F"
+			rewards: [{ id: "01057B4382026A1C", type: "xp_levels", xp_levels: 10 }]
+			shape: "pentagon"
+			size: 1.5d
+			tasks: [{ advancement: "minecraft:adventure/adventuring_time", criterion: "", id: "3649E1DA84ECDB0C", type: "advancement" }]
+			x: 10.0d
+			y: 1.5d
+		}
+	]
+}

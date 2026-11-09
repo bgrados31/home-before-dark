@@ -1,0 +1,1 @@
+{"text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist":"Mine with weapon whitelist","text.autoconfig.bettercombat.option.client.mineWithWeaponWhitelist.@Tooltip":"Weapons with an ID that matches this regex can always mine blocks, even when \u0027Mine with weapons\u0027 is disabled"}

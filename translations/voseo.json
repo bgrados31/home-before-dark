@@ -1,0 +1,15 @@
+{
+  "_comment": "Voseo (es_ar/es_uy) -> tú. build-translations.ps1 lo aplica a los textos tomados de es_ar o es_uy. Palabra completa, respeta la mayúscula inicial.",
+  "presioná": "presiona", "pulsá": "pulsa", "hacé": "haz", "tenés": "tienes", "contactá": "contacta", "ingresá": "ingresa",
+  "mantené": "mantén", "sostené": "mantén", "usá": "usa", "revisá": "revisa", "seleccioná": "selecciona", "arrastrá": "arrastra",
+  "evitá": "evita", "intentá": "intenta", "intentás": "intentas", "escribí": "escribe", "podés": "puedes", "querés": "quieres",
+  "sos": "eres", "necesitás": "necesitas", "sabés": "sabes", "hacés": "haces", "usás": "usas", "elegí": "elige", "abrí": "abre",
+  "cerrá": "cierra", "poné": "pon", "tené": "ten", "probá": "prueba", "mirá": "mira", "asegurate": "asegúrate", "fijate": "fíjate",
+  "vos": "tú", "activá": "activa", "desactivá": "desactiva", "cambiá": "cambia", "clickeá": "haz clic en", "cliqueá": "haz clic en",
+  "configurá": "configura", "agregá": "agrega", "añadí": "añade", "guardá": "guarda", "borrá": "borra", "volvé": "vuelve",
+  "colocá": "coloca", "esperá": "espera", "recordá": "recuerda", "dejá": "deja", "buscá": "busca", "tocá": "toca",
+  "comprobá": "comprueba", "reiniciá": "reinicia", "instalá": "instala", "descargá": "descarga", "copiá": "copia", "pegá": "pega",
+  "asigná": "asigna", "definí": "define", "ajustá": "ajusta", "mostrá": "muestra", "ingresás": "ingresas", "presionás": "presionas",
+  "elegís": "eliges", "querés,": "quieres,", "tenés,": "tienes,", "podrás": "podrás", "movés": "mueves", "mové": "mueve",
+  "pasá": "pasa", "rellená": "rellena", "completá": "completa", "confirmá": "confirma", "cancelá": "cancela", "aceptá": "acepta"
+}

@@ -1,0 +1,378 @@
+<title>Mods de Home Before Dark</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Layout: one reading column; categories ranked 1→16 (most game content first), each a lantern-lit list. Single dusk look, like the pack's menu. */
+:root {
+  --bg: #12132a;
+  --panel: #1a1c37;
+  --panel-2: #22244a;
+  --fg: #f1e6cf;
+  --muted: #a8a2bd;
+  --gold: #ffd27a;
+  --ember: #e9894a;
+  --line: #2f3160;
+  --new-bg: #3a2a18;
+  --display: "Pixelify Sans", "Courier New", monospace;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 17px/1.5 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+}
+.wrap { max-width: 860px; margin: 0 auto; display: grid; gap: 28px; }
+header { padding-block: 44px 8px; display: grid; gap: 10px; }
+.kicker { font: 500 14px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--ember); }
+h1 { font: 700 clamp(34px, 7vw, 56px)/1 var(--display); margin: 0; color: var(--gold); text-wrap: balance;
+     text-shadow: 3px 3px 0 #3b2414; }
+.lede { margin: 0; max-width: 62ch; color: var(--fg); }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 6px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.stats b { color: var(--fg); font: 700 20px/1 var(--display); margin-right: 6px; }
+
+.tools { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+         padding-block: 10px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.tools input[type=search] { flex: 1 1 220px; min-width: 0; background: var(--panel); color: var(--fg); border: 1px solid var(--line);
+  border-radius: 6px; padding: 9px 12px; font: 400 16px var(--body); }
+.tools input[type=search]::placeholder { color: var(--muted); }
+.toggle { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; user-select: none; color: var(--fg);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 8px 12px; }
+.toggle input { accent-color: var(--ember); width: 16px; height: 16px; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+nav.index { display: flex; flex-wrap: wrap; gap: 6px; }
+nav.index a { font: 500 13px/1 var(--display); color: var(--muted); text-decoration: none; border: 1px solid var(--line);
+  border-radius: 4px; padding: 6px 8px; }
+nav.index a:hover { color: var(--gold); border-color: var(--ember); }
+
+section.cat { display: grid; gap: 10px; scroll-margin-top: 70px; }
+.cat-head { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; align-items: baseline; }
+.rank { font: 700 26px/1 var(--display); color: var(--ember); font-variant-numeric: tabular-nums; min-width: 1.6em; }
+.cat-head h2 { margin: 0; font: 700 22px/1.15 var(--display); color: var(--gold); text-wrap: balance; }
+.cat-head p { grid-column: 2; margin: 0; color: var(--muted); max-width: 64ch; }
+ol.mods { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); overflow: hidden; }
+ol.mods li { display: grid; grid-template-columns: 14px 1fr; gap: 12px; padding: 10px 14px; border-top: 1px solid var(--line); }
+ol.mods li:first-child { border-top: 0; }
+ol.mods li:nth-child(-n+3) { background: var(--panel-2); }
+.lamp { width: 8px; height: 11px; margin-top: 7px; border-radius: 2px 2px 3px 3px; background: #4a4560; box-shadow: inset 0 2px 0 #2a2738; }
+li:nth-child(-n+3) .lamp { background: var(--gold); box-shadow: 0 0 9px 2px rgba(255, 190, 90, .55), inset 0 2px 0 #8a5a2a; }
+.m { min-width: 0; }
+.m strong { font-weight: 700; }
+.m span.d { color: var(--muted); }
+.badge { display: inline-block; margin-left: 6px; font: 700 11px/1 var(--display); letter-spacing: .06em; color: var(--gold);
+  background: var(--new-bg); border: 1px solid #6a4a22; border-radius: 3px; padding: 3px 5px; vertical-align: 2px; }
+.sub { color: var(--muted); font-size: 15px; display: block; }
+
+details.libs { border: 1px solid var(--line); border-radius: 8px; background: var(--panel); padding: 12px 14px; }
+details.libs summary { cursor: pointer; font: 700 16px var(--display); color: var(--gold); }
+details.libs p { margin: 10px 0 0; color: var(--muted); }
+.considered { display: grid; gap: 8px; }
+.considered dl { margin: 0; display: grid; gap: 10px; }
+.considered dt { font-weight: 700; }
+.considered dd { margin: 0; color: var(--muted); }
+footer { color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); padding-top: 16px; }
+.empty { color: var(--muted); font-style: italic; }
+@media (max-width: 480px) { body { font-size: 16px; } .cat-head p { grid-column: 1 / -1; } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="kicker">Modpack · NeoForge 1.21.1 · v0.3.0</div>
+  <h1>Home Before Dark</h1>
+  <p class="lede">Todos los mods del pack, por categoría. Las categorías van de la que más contenido de juego aporta a la más básica, y dentro de cada una los mods siguen el mismo orden. Los tres primeros de cada lista tienen el farol encendido.</p>
+  <div class="stats"><span><b>225</b>mods en total</span><span><b>~175</b>con contenido o mejoras</span><span><b>35</b>nuevos en v0.3.0</span><span><b>~2,5 min</b>de carga inicial</span></div>
+</header>
+
+<div class="tools">
+  <input type="search" id="q" placeholder="Buscar un mod (ej. dragones, Create, muebles)" aria-label="Buscar un mod">
+  <label class="toggle"><input type="checkbox" id="onlynew"> Solo los nuevos</label>
+</div>
+
+<nav class="index" aria-label="Categorías">
+  <a href="#rpg">1 RPG</a><a href="#dimensiones">2 Dimensiones</a><a href="#criaturas">3 Criaturas</a><a href="#estructuras">4 Estructuras</a>
+  <a href="#tecnologia">5 Tecnología</a><a href="#aldeas">6 Aldeas</a><a href="#misiones">7 Misiones</a><a href="#mundo">8 Mundo</a>
+  <a href="#construccion">9 Construcción</a><a href="#navidad">10 Navidad</a><a href="#comida">11 Comida</a><a href="#coop">12 Co-op</a>
+  <a href="#qol">13 Comodidad</a><a href="#visual">14 Visual y sonido</a><a href="#rendimiento">15 Rendimiento</a>
+</nav>
+
+<section class="cat" id="rpg">
+  <div class="cat-head"><span class="rank">1</span><h2>RPG medieval: clases, magia y combate</h2>
+  <p>El corazón del rollo medieval: eliges un camino (mago, paladín, pícaro, guerrero, arquero), lo mejoras con árboles de habilidades y peleas con combate de combos.</p></div>
+  <ol class="mods">
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Clases RPG Series</strong><span class="badge">NUEVO</span> <span class="d">— cinco clases con armas, armaduras y hechizos propios.</span>
+      <span class="sub">Wizards (mago) · Paladins &amp; Priests (paladín y sacerdote) · Rogues &amp; Warriors (pícaro y guerrero) · Archers (arquero)</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Skill Tree + Pufferfish's Skills</strong><span class="badge">NUEVO</span> <span class="d">— árboles de habilidades con más de 200 nodos; ganas puntos al subir de nivel y especializas tu clase en ataque o defensa.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Iron's Spells 'n Spellbooks</strong> <span class="d">— magia con libros de hechizos: más de 100 hechizos, escuelas de magia y jefes magos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Ars Nouveau</strong> <span class="d">— magia creativa: diseñas tus propios hechizos, rituales y familiares.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Better Combat</strong> <span class="d">— combate con combos y ataques en arco según el arma, al estilo de un RPG de acción.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Epic Knights</strong><span class="badge">NUEVO</span> <span class="d">— armaduras de caballero, escudos con heráldica y armas medievales.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Simply Swords</strong><span class="badge">NUEVO</span> <span class="d">— espadas únicas y legendarias con habilidades especiales.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Jewelry</strong><span class="badge">NUEVO</span> <span class="d">— gemas nuevas en las cuevas y joyas (anillos, collares) con bonificaciones.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Artifacts</strong> <span class="d">— objetos mágicos raros escondidos en cofres de estructuras.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Fantasy Armor</strong><span class="badge">NUEVO</span> <span class="d">— armaduras de fantasía con modelos 3D.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Combat Roll</strong> <span class="d">— esquivar rodando.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="dimensiones">
+  <div class="cat-head"><span class="rank">2</span><h2>Dimensiones</h2>
+  <p>Mundos enteros por explorar, cada uno con su progresión y sus jefes.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>The Twilight Forest</strong> <span class="d">— bosque encantado eterno con una cadena de jefes (Naga, Lich, Hidra, Reina de las Nieves…).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>The Aether</strong> <span class="d">— islas flotantes en el cielo, monturas voladoras y mazmorras.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Eternal Starlight</strong><span class="badge">NUEVO</span> <span class="d">— dimensión estelar con biomas mágicos; hay que vencer al Guardián para abrir el portal.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>The Undergarden</strong><span class="badge">NUEVO</span> <span class="d">— mundo subterráneo oscuro con flora, fauna y jefe propios.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Deep Aether</strong><span class="badge">NUEVO</span> <span class="d">— más biomas, criaturas, comida y un jefe para el Aether.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Deeper and Darker</strong> <span class="d">— la Otherside: una dimensión bajo el Deep Dark, para después del Warden.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="criaturas">
+  <div class="cat-head"><span class="rank">3</span><h2>Criaturas y jefes</h2>
+  <p>Dragones, jefes con arena propia y cientos de animales nuevos.</p></div>
+  <ol class="mods">
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Ice and Fire (Community Edition)</strong><span class="badge">NUEVO</span> <span class="d">— dragones de fuego, hielo y rayo, grifos, cíclopes, sirenas, gorgonas… Es una beta para 1.21.1.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>L_Ender's Cataclysm</strong> <span class="d">— jefes épicos con estructuras propias (Ignis, el Leviatán, el Profanador…).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Mowzie's Mobs</strong> <span class="d">— jefes y criaturas con animaciones muy cuidadas (Frostmaw, Ferrous Wroughtnaut…).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Alex's Mobs</strong> <span class="d">— más de 90 animales y criaturas.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Friends &amp; Foes</strong> <span class="d">— criaturas de las votaciones de Minecraft Live que Mojang no agregó (golem de cobre, illusioner…).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Naturalist</strong> <span class="d">— fauna realista: osos, ciervos, serpientes, aves.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="estructuras">
+  <div class="cat-head"><span class="rank">4</span><h2>Estructuras y exploración</h2>
+  <p>Castillos, mazmorras, tabernas y ruinas por todo el mundo, con botín para cada jugador.</p></div>
+  <ol class="mods">
+    <li class="new"><i class="lamp"></i><div class="m"><strong>When Dungeons Arise</strong><span class="badge">NUEVO</span> <span class="d">— fortalezas y mazmorras gigantes: castillos, catedrales, torres de magos, barcos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>YUNG's (11 mods)</strong> <span class="d">— rehacen mazmorras, minas, fortalezas, templos, monumentos, cabañas de bruja y puentes.</span>
+      <span class="sub">Better Dungeons · Mineshafts · Strongholds · Desert Temples · Jungle Temples · Ocean Monuments · Witch Huts · Nether Fortresses · End Island · Bridges · Extras</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Dungeons and Taverns</strong> <span class="d">— tabernas que venden mapas, mazmorras y lugares especiales.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Lootr</strong><span class="badge">NUEVO</span> <span class="d">— cada jugador abre su propio botín en los cofres de estructuras. En co-op nadie se queda sin loot.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Towns and Towers</strong> <span class="d">— pueblos y torres distintos para cada bioma.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>ChoiceTheorem's Overhauled Village</strong> <span class="d">— aldeas rehechas, con un estilo para cada bioma.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Medieval Buildings</strong><span class="badge">NUEVO</span> <span class="d">— construcciones medievales con enemigos y tesoros escondidos, también en el Nether y el End.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Repurposed Structures</strong><span class="badge">NUEVO</span> <span class="d">— versiones de las estructuras de siempre para cada bioma (fortalezas de jungla, minas de hielo…).</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Structory y Structory: Towers</strong><span class="badge">NUEVO</span> <span class="d">— ruinas, campamentos y torres que decoran el paisaje.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Explorify</strong> <span class="d">— decenas de estructuras pequeñas repartidas por el mundo.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Waystones</strong> <span class="d">— piedras de teletransporte entre lugares descubiertos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Nature's Compass y Explorer's Compass</strong> <span class="d">— brújulas que te llevan a un bioma o estructura.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Traveler's Titles</strong><span class="badge">NUEVO</span> <span class="d">— un título de película aparece al entrar en un bioma o dimensión nueva.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Sparse Structures</strong><span class="badge">NUEVO</span> <span class="d">— separa las estructuras para que no salgan unas encima de otras.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="tecnologia">
+  <div class="cat-head"><span class="rank">5</span><h2>Tecnología</h2>
+  <p>Máquinas mecánicas sin electricidad (o con ella), trenes y almacenamiento.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>Create</strong> <span class="d">— engranajes, molinos, cintas, prensas y fábricas animadas.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Steam 'n' Rails</strong> <span class="d">— más trenes, vías y estaciones para Create.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Create Crafts &amp; Additions</strong> <span class="d">— electricidad, cables y motores para Create.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Sophisticated Backpacks</strong> <span class="d">— mochilas mejorables (auto-recoger, comida, herramientas).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Sophisticated Storage</strong> <span class="d">— cofres y barriles mejorables.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Create Enchantment Industry</strong> <span class="d">— encantar y guardar experiencia con máquinas.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Create Slice &amp; Dice</strong> <span class="d">— cocina automática de Farmer's Delight con Create.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="aldeas">
+  <div class="cat-head"><span class="rank">6</span><h2>Aldeas, soldados y aldeanos</h2>
+  <p>Aldeas vivas y defendidas, y tu propio ejército medieval.</p></div>
+  <ol class="mods">
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Villager Recruits</strong><span class="badge">NUEVO</span> <span class="d">— contrata aldeanos como soldados, dales órdenes en grupo, reclama territorio y asedia.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Guard Villagers</strong><span class="badge">NUEVO</span> <span class="d">— guardias que patrullan y defienden las aldeas.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Villager Names</strong><span class="badge">NUEVO</span> <span class="d">— cada aldeano tiene nombre propio.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Trade Cycling</strong> <span class="d">— cambiar las ofertas de un aldeano que aún no comerció.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="misiones">
+  <div class="cat-head"><span class="rank">7</span><h2>Misiones y guías</h2>
+  <p>Lo que da dirección a la partida.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>FTB Quests</strong> <span class="d">— el árbol de misiones del pack (capítulos en español: en preparación).</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Bountiful</strong><span class="badge">NUEVO</span> <span class="d">— tablones de recompensas en las aldeas: encargos de “trae esto” o “caza aquello” con premio.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Patchouli</strong> <span class="d">— libros guía dentro del juego (los usan Ars Nouveau y otros).</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="mundo">
+  <div class="cat-head"><span class="rank">8</span><h2>Generación de mundo</h2>
+  <p>El paisaje que se ve con shaders: montañas enormes, biomas nuevos y estaciones.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>Terralith</strong> <span class="d">— más de 95 biomas nuevos, hechos solo con bloques de Minecraft.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Tectonic</strong> <span class="d">— montañas, valles, ríos y océanos espectaculares.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Serene Seasons</strong> <span class="d">— estaciones de verdad: cambian los colores, la nieve y los cultivos que crecen.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Incendium</strong> <span class="d">— Nether rehecho, con biomas y estructuras nuevas.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Nullscape</strong> <span class="d">— End rehecho, con islas de formas imposibles.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="construccion">
+  <div class="cat-head"><span class="rank">9</span><h2>Construcción y decoración</h2>
+  <p>Miles de bloques y muebles para levantar pueblos, castillos y la casa del grupo.</p></div>
+  <ol class="mods">
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Yuushya Townscape</strong><span class="badge">NUEVO</span> <span class="d">— más de 2600 bloques para construir pueblos y ciudades: fachadas, tejados, calles, farolas, señales.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Macaw's (10 mods)</strong> <span class="d">— muebles, puertas, ventanas, techos, puentes, vallas, trampillas, lámparas, caminos y escaleras para cada madera.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Supplementaries</strong> <span class="d">— cientos de objetos decorativos y útiles (veletas, jarras, carteles, faroles…).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Chipped</strong> <span class="d">— miles de variantes de bloques comunes.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Handcrafted</strong> <span class="d">— muebles con estilo (camas, sillas, mesas, estantes).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Create Deco, Design n' Decor y Copycats+</strong> <span class="d">— decoración industrial y bloques que copian cualquier textura.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>FramedBlocks</strong> <span class="d">— formas (pendientes, columnas, marcos) que toman la textura que quieras.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Another Furniture e Immersive Furniture</strong> <span class="d">— más muebles; Immersive deja diseñar los tuyos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Rechiseled y Excessive Building</strong> <span class="d">— variantes cinceladas y bloques que faltan en vanilla.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Amendments</strong> <span class="d">— mejora bloques de siempre (faroles en paredes, calderos con líquidos…).</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Fairy Lights</strong><span class="badge">NUEVO</span> <span class="d">— guirnaldas de luces colgantes, perfectas para Navidad.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Immersive Paintings</strong> <span class="d">— cuadros con tus propias imágenes.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Medieval Paintings</strong><span class="badge">NUEVO</span> <span class="d">— cuadros de estilo medieval y fantasía.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Effortless Building y Building Wands</strong> <span class="d">— construir rápido: líneas, muros, espejos y varitas.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Fusion</strong> <span class="d">— texturas conectadas (vidrios y bloques que se unen).</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="navidad">
+  <div class="cat-head"><span class="rank">10</span><h2>Navidad</h2>
+  <p>Contenido festivo que encaja en invierno y no estorba el resto del año.</p></div>
+  <ol class="mods">
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Snowy Spirit</strong><span class="badge">NUEVO</span> <span class="d">— casas de jengibre, galletas, trineos, regalos, guirnaldas y aldeas nevadas decoradas.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Festive Delight</strong><span class="badge">NUEVO</span> <span class="d">— comidas navideñas para Farmer's Delight.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Giant Christmas Tree</strong><span class="badge">NUEVO</span> <span class="d">— árboles de Navidad gigantes en biomas nevados.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Create: Wrapped</strong><span class="badge">NUEVO</span> <span class="d">— un taller de regalos automático con Create.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="comida">
+  <div class="cat-head"><span class="rank">11</span><h2>Comida y granja</h2>
+  <p>Cocina, cultivos y platos que dan buenos efectos.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>Farmer's Delight</strong> <span class="d">— cocina, ollas, cuchillos, cultivos nuevos y decenas de platos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>My Nether's Delight</strong> <span class="d">— cocina con ingredientes del Nether.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>End's Delight</strong> <span class="d">— cocina con ingredientes del End.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Comforts</strong> <span class="d">— sacos de dormir y hamacas para las expediciones.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="coop">
+  <div class="cat-head"><span class="rank">12</span><h2>Co-op y multijugador</h2>
+  <p>Jugar juntos sin pelearse por el terreno ni perder las cosas.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>FTB Chunks</strong> <span class="d">— mapa y minimapa; reclamar y proteger el terreno del equipo.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>FTB Teams</strong> <span class="d">— equipos que comparten misiones y terreno.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Simple Voice Chat</strong> <span class="d">— chat de voz por proximidad dentro del juego.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Corpse</strong> <span class="d">— al morir queda una tumba con tus cosas.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>NetherPortalFix</strong> <span class="d">— cada jugador vuelve al portal correcto.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Packet Fixer, Fast IP Ping y Better Ping Display</strong> <span class="d">— conexión estable con muchos mods, lista de servidores rápida y ping en números.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="qol">
+  <div class="cat-head"><span class="rank">13</span><h2>Comodidad</h2>
+  <p>Pequeñas mejoras que se notan cada minuto.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>JEI y EMI</strong> <span class="d">— ver cómo se fabrica cualquier cosa.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Jade</strong> <span class="d">— información del bloque o criatura que miras.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>FTB Ultimine</strong> <span class="d">— minar o talar vetas enteras de una vez.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Carry On</strong> <span class="d">— cargar cofres y animales.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Inventory Profiles Next y Mouse Tweaks</strong> <span class="d">— ordenar el inventario y moverlo rápido.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Just Zoom</strong> <span class="d">— zoom con la tecla C.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Shoulder Surfing Reloaded</strong> <span class="d">— cámara en tercera persona sobre el hombro.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>AppleSkin</strong> <span class="d">— cuánto llena cada comida.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Easy Anvils, Easy Magic, FastWorkbench y FastFurnace</strong> <span class="d">— yunques, encantamientos, mesas y hornos más cómodos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Polymorph</strong> <span class="d">— elegir receta cuando dos mods usan la misma.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Legendary Tooltips, Enchantment Descriptions y Better Advancements</strong> <span class="d">— descripciones más bonitas y claras.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Pick Up Notifier, Toast Control, Overflowing Bars y BetterF3</strong> <span class="d">— avisos y barras más limpios.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Leaves Be Gone</strong> <span class="d">— las hojas caen rápido al talar.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Controlling, Searchables y Default Options</strong> <span class="d">— buscar controles y opciones; ajustes iniciales del pack.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="visual">
+  <div class="cat-head"><span class="rank">14</span><h2>Visual, sonido y menú</h2>
+  <p>Para que se vea y se escuche precioso.</p></div>
+  <ol class="mods">
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Auroras y Enhanced Celestials</strong><span class="badge">NUEVO</span> <span class="d">— auroras en el cielo nocturno; lunas de sangre, de cosecha y azules.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Subtle Effects, Particle Effects y Ambient Environment</strong><span class="badge">NUEVO</span> <span class="d">— luciérnagas, humo de chimeneas, chispas, partículas por efecto y colores de bioma más variados.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Animaciones</strong><span class="badge">NUEVO</span> <span class="d">— Not Enough Animations, 3D Skin Layers, Wavey Capes, Smooth Swapping, Visual Workbench, ItemPhysic Lite.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Texture packs</strong><span class="badge">NUEVO</span> <span class="d">— Fresh Animations Extensions, Better Leaves, Fancy Crops, Better Lanterns, Low On Fire, Visual Armor Trims, Enhanced Boss Bars.</span></div></li>
+    <li class="new"><i class="lamp"></i><div class="m"><strong>Blur+</strong><span class="badge">NUEVO</span> <span class="d">— desenfoque suave detrás de inventarios y menús.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Iris + shaders</strong> <span class="d">— Complementary Reimagined (preseleccionado), Complementary Unbound y BSL. Se activan con la tecla K.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Distant Horizons</strong> <span class="d">— ver montañas a kilómetros de distancia.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Fresh Animations + EMF + ETF</strong> <span class="d">— animaciones nuevas para las criaturas de siempre.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Sound Physics Remastered y AmbientSounds</strong> <span class="d">— eco en cuevas y sonidos de ambiente por bioma.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Falling Leaves, Particle Rain y Euphoria Patches</strong> <span class="d">— hojas cayendo, lluvia y nieve en partículas, mejoras para shaders.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>FancyMenu y Drippy Loading Screen</strong> <span class="d">— el menú de Home Before Dark y las pantallas de carga por estación.</span></div></li>
+  </ol>
+</section>
+
+<section class="cat" id="rendimiento">
+  <div class="cat-head"><span class="rank">15</span><h2>Rendimiento</h2>
+  <p>Básicos pero imprescindibles: más FPS y menos tiempo de carga en PCs medias.</p></div>
+  <ol class="mods">
+    <li><i class="lamp"></i><div class="m"><strong>Sodium</strong> <span class="d">— el motor de renderizado rápido (con Sodium Extra y Reese's Sodium Options).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>ModernFix y FerriteCore</strong> <span class="d">— carga más rápida y mucha menos RAM.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Lithium</strong> <span class="d">— lógica del juego y del servidor más eficiente.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>ImmediatelyFast, Entity Culling, More Culling y BadOptimizations</strong> <span class="d">— dibujan solo lo que se ve.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Dynamic FPS</strong> <span class="d">— baja el consumo con el juego minimizado (ideal en laptops).</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Ksyxis, Clumps y Model Gap Fix</strong> <span class="d">— entrar al mundo más rápido, menos orbes de experiencia, modelos sin huecos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>spark, Crash Assistant y AttributeFix</strong> <span class="d">— diagnosticar lag, explicar cierres y corregir límites de atributos.</span></div></li>
+    <li><i class="lamp"></i><div class="m"><strong>Chunky</strong> <span class="d">— pre-generar el mundo (solo servidor).</span></div></li>
+  </ol>
+</section>
+
+<p class="empty" id="noresults" hidden>Ningún mod coincide con la búsqueda.</p>
+
+<details class="libs">
+  <summary>Librerías (≈50): las necesitan otros mods, no agregan contenido</summary>
+  <p>Architectury API · Cloth Config · Fzzy Config · Kotlin for Forge · GeckoLib · Curios · Moonlight · Collective · Balm · Bookshelf · Placebo · Puzzles Lib · Prism · Iceberg · Konkrete · Melody · MezzConfig · owo-lib · Resourceful Lib · Athena · CreativeCore · Cristel Lib · Citadel · GlitchCore · Lionfish API · libIPN · Prickle · RunicLib · Iron's Lib · SuperMartijn642's Core y Config Lib · Sophisticated Core · Create: Dragons Plus · FTB Library · YUNG's API · TerraBlender · Lithostitched · playerAnimator · Spell Engine · Spell Power · Runes · Critical Strike · Ranged Weapon API · Shield API · Armor Model API · Structure Pool API · Bundle API · Simply Tooltips · Jupiter · Uranus · Kambrik</p>
+</details>
+
+<section class="considered">
+  <div class="cat-head"><span class="rank">·</span><h2>Revisados y no agregados</h2>
+  <p>Mods buenos que dejé fuera por ahora, y por qué.</p></div>
+  <dl>
+    <dt>Every Compat (quitado en esta versión)</dt>
+    <dd>Copiaba los muebles y variantes de 15 mods en cada madera de otros mods: más de 14.500 bloques extra. Quitarlo bajó la carga de 182 a 142 segundos. Todas las maderas normales siguen teniendo sus muebles.</dd>
+    <dt>MineColonies (construir una ciudad con colonos)</dt>
+    <dd>Existe para nuestra versión (en CurseForge, como beta). Es enorme y cambia la forma de jugar, y sus colonos cargan mucho el servidor con 10 personas. Se puede agregar si el grupo lo quiere.</dd>
+    <dt>Biomes O' Plenty y Regions Unexplored</dt>
+    <dd>Suman muchas maderas y biomas que se solapan con Terralith, que ya trae más de 95. Con 225 mods, cada mod de mundo grande alarga la carga en PCs medias.</dd>
+    <dt>Minecraft Comes Alive (MCA Reborn)</dt>
+    <dd>Reemplaza a los aldeanos y choca con Villager Recruits y Guard Villagers.</dd>
+    <dt>Born in Chaos, Quark e IDAS</dt>
+    <dd>Ya hay muchos enemigos y estructuras; Quark (requisito de IDAS) cambia demasiadas cosas a la vez.</dd>
+  </dl>
+</section>
+
+<footer>Home Before Dark v0.3.0 · lista generada desde el pack de packwiz · NeoForge 21.1 para Minecraft 1.21.1</footer>
+</div>
+
+<script>
+(function () {
+  var q = document.getElementById('q'), onlyNew = document.getElementById('onlynew');
+  var cats = Array.prototype.slice.call(document.querySelectorAll('section.cat'));
+  var none = document.getElementById('noresults');
+  function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function apply() {
+    var term = norm(q.value.trim()), anyShown = false;
+    cats.forEach(function (sec) {
+      var shown = 0;
+      sec.querySelectorAll('ol.mods li').forEach(function (li) {
+        var ok = (!onlyNew.checked || li.classList.contains('new')) && (!term || norm(li.textContent).indexOf(term) >= 0);
+        li.hidden = !ok; if (ok) shown++;
+      });
+      sec.hidden = shown === 0; if (shown) anyShown = true;
+    });
+    none.hidden = anyShown;
+  }
+  q.addEventListener('input', apply); onlyNew.addEventListener('change', apply);
+})();
+</script>

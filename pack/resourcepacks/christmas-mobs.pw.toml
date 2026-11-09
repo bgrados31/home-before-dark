@@ -1,0 +1,13 @@
+name = "Christmas mobs"
+filename = "Christmas mobs.zip"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/DjNTMDAN/versions/5whKRlTA/Christmas%20mobs.zip"
+hash-format = "sha512"
+hash = "4fb4914b7070fa3374b28405a870a03eabfbf4e90e40c486b79382ea5c3514315047e0321905dbe0e5ab15ff545716c9fea9a17da6b295d6e7293294699ace78"
+
+[update]
+[update.modrinth]
+mod-id = "DjNTMDAN"
+version = "5whKRlTA"
